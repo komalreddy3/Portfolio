@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.6e232f5b.css",
+    "main.js": "/Portfolio/static/js/main.f28a7133.js",
+    "static/media/profile1.jpeg": "/Portfolio/static/media/profile1.0f74a6fa38225d73950c.jpeg",
+    "static/media/Movie recommendation.png": "/Portfolio/static/media/Movie recommendation.3f602c05ae2a255a7f48.png",
+    "static/media/Drum.png": "/Portfolio/static/media/Drum.068891d288bbd15de7b3.png",
+    "static/media/profile2.jpg": "/Portfolio/static/media/profile2.3822096186409ec27496.jpg",
+    "static/media/ineuron.png": "/Portfolio/static/media/ineuron.d13afd974af1acbc15d8.png",
+    "static/media/Dice.png": "/Portfolio/static/media/Dice.53c550e96f71ea99618d.png",
+    "static/media/Komal_Reddy_K_CV.pdf": "/Portfolio/static/media/Komal_Reddy_K_CV.ad2328433beac48cea73.pdf",
+    "static/media/Counter.png": "/Portfolio/static/media/Counter.54cba2a704d04476c175.png",
+    "static/media/Sidebar.png": "/Portfolio/static/media/Sidebar.9f32c0f0655c0cb35262.png",
+    "static/media/LGM.png": "/Portfolio/static/media/LGM.b6703b850e0c6355e33a.png",
+    "static/media/Simon.png": "/Portfolio/static/media/Simon.eda0850d8b91287d2d85.png",
+    "index.html": "/Portfolio/index.html",
+    "main.6e232f5b.css.map": "/Portfolio/static/css/main.6e232f5b.css.map",
+    "main.f28a7133.js.map": "/Portfolio/static/js/main.f28a7133.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e232f5b.css",
+    "static/js/main.f28a7133.js"
+  ]
+}
