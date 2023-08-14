@@ -14,21 +14,21 @@ const Contact = () => {
                         <i className="bx bx-mail-send contact__card-icon"></i>
                         <h3 className="contact__card-title">Email</h3>
                         <span className="contact__card-data">workwithkomalreddy@gmail.com</span>
-                        <a href="mailto:workwithkomalreddy@gmail.com" className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="mailto:workwithkomalreddy@gmail.com" className="contact__button" target='_blank'>Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
 
                     <div className="contact__card">
                         <i className="bx bxl-whatsapp-square contact__card-icon"></i>
                         <h3 className="contact__card-title">Whatsapp</h3>
                         <span className="contact__card-data">8897714514</span>
-                        <a href="https://wa.me/8897714514" className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="https://wa.me/8897714514" className="contact__button" target='_blank'>Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
 
                     <div className="contact__card">
                         <i className="bx bxl-linkedin-square contact__card-icon"></i>
                         <h3 className="contact__card-title">Linkedin</h3>
                         <span className="contact__card-data">komalreddyk</span>
-                        <a href="https://www.linkedin.com/in/komalreddyk/" className="contact__button">Let's connect <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/komalreddyk/" className="contact__button" target='_blank'>Let's connect <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                 </div>
             </div>
