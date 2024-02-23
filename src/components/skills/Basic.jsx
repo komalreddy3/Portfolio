@@ -1,9 +1,9 @@
 import React from 'react'
 
-const WebDevelopment = () => {
+const Basic = () => {
   return (
     <div className="skills__content">
-        <h3 className="skills__title">Web Development</h3>
+        <h3 className="skills__title">Miscellaneous</h3>
 
         <div className="skills__box">
             <div className="skills__group">
@@ -11,7 +11,7 @@ const WebDevelopment = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> HTML </h3>
+                    <h3 className="skills__name"> Linux </h3>
                 </div>
                 </div>
 
@@ -19,7 +19,7 @@ const WebDevelopment = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> CSS </h3>
+                    <h3 className="skills__name"> Bash Scripting </h3>
                 </div>
                 </div>
 
@@ -27,34 +27,32 @@ const WebDevelopment = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> JS </h3>
+                    <h3 className="skills__name"> Git </h3>
                 </div>
                 </div>
+
                 <div className="skills__data">
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> Bootstrap </h3>
+                    <h3 className="skills__name"> C </h3>
                 </div>
                 </div>
-
-                
             </div>
 
             <div className="skills__group">
-                
             <div className="skills__data">
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> NodeJS</h3>
+                    <h3 className="skills__name"> C++ </h3>
                 </div>
                 </div>
                 <div className="skills__data">
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> ExpressJS</h3>
+                    <h3 className="skills__name"> Python </h3>
                 </div>
                 </div>
 
@@ -62,7 +60,15 @@ const WebDevelopment = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name">ReactJS</h3>
+                    <h3 className="skills__name"> Golang </h3>
+                </div>
+                </div>
+
+                <div className="skills__data">
+                <i class='bx bx-badge-check'></i>
+
+                <div>
+                    <h3 className="skills__name">SQL (MySQL,Pgsql)</h3>
                 </div>
                 </div>
 
@@ -79,4 +85,4 @@ const WebDevelopment = () => {
   )
 }
 
-export default WebDevelopment
+export default Basic

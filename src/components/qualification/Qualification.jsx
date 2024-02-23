@@ -96,6 +96,24 @@ const Qualification = () => {
                 </div>
 
                 <div className={toggleState===2?"qualification__content qualification__content-active":"qualification__content "}>
+                <div className="qualification__data">
+                    <div></div>
+                    <div>
+                        <span className="qualification__rounder"></span>
+                        <span className="qualification__line"></span>
+                    </div>
+                        <div>
+                            <h3 className="qualification__title">SDE Backend Intern</h3>
+                            <span className="qualification__subtitle">Devtron Labs - Onsite (Gurgaon)</span>
+                            <div className="qualification__calender">
+                            <i className="uil uil-calendar-alt"> </i>
+                                Jan 2024 - Present
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                
                     <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">Data Science Intern</h3>

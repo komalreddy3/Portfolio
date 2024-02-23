@@ -45,7 +45,7 @@ const MachineLearning = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> Decision Trees</h3>
+                    <h3 className="skills__name"> D-Trees</h3>
                 </div>
                 </div>
 
@@ -53,7 +53,7 @@ const MachineLearning = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> K- means Clustering</h3>
+                    <h3 className="skills__name"> K- means</h3>
                 </div>
                 </div>
 
@@ -61,7 +61,7 @@ const MachineLearning = () => {
                 <i class='bx bx-badge-check'></i>
 
                 <div>
-                    <h3 className="skills__name"> Cross Validation</h3>
+                    <h3 className="skills__name"> CV</h3>
                 </div>
                 </div>
 

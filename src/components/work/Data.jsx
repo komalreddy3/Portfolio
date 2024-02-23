@@ -8,6 +8,8 @@ import work7 from "../../assets/Sidebar.png"
 import work8 from "../../assets/Keeper.png"
 import work9 from "../../assets/Counter.png"
 import work10 from "../../assets/Simon.png"
+import work12 from "../../assets/Mongo.png"
+import work11 from "../../assets/ams.png"
 
 export const projectsData=[
     {
@@ -80,6 +82,20 @@ export const projectsData=[
         category:"Web ",
         plink:"https://github.com/komalreddy3/SimonGame"
     },
+    {
+        id:11,
+        image:work11,
+        title:"School Management App",
+        category:"Devops ",
+        plink:"https://github.com/komalreddy3/Attendance-go"
+    },
+    {
+        id:12,
+        image:work12,
+        title:"Mongo Kuber App",
+        category:"Devops ",
+        plink:"https://github.com/komalreddy3/KuberMongo"
+    },
 ]
 
 export const projectsNav=[
@@ -91,5 +107,8 @@ export const projectsNav=[
     },
     {
         name:'ML ',
+    },
+    {
+        name:'Devops ',
     },
 ]
