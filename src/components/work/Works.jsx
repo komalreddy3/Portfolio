@@ -30,7 +30,7 @@ const Works = () => {
         return (
           <span onClick={(e)=>{
             handleClick(e,index);
-          }} className={`${active===index? 'active-work':""}work__item`} key={index}>{item.name}</span>
+          }} className={`${active===index? 'active-work':""} work__item`} key={index}>{item.name}</span>
         )
       })}
     </div>
