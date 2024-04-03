@@ -36,7 +36,7 @@ const Header = () => {
 
                     <li className="nav__item">
                         <a href="#portfolio" className="nav__link">
-                            <i className="iuil uil-scenery nav__icon"></i> Portfolio
+                            <i className="iuil uil-scenery nav__icon"></i> Works
                         </a>
                     </li>
 
