@@ -9,7 +9,8 @@
 }
 
 .qualification__button{
-    font-size: var(--h3-font-size);
+    /*font-size: var(--h3-font-size);*/
+    font-size: medium;
     font-weight:var(--font-medium) ;
     color:var(--title-color);
     margin:0 var(--mb-1);
@@ -17,8 +18,8 @@
 }
 
 .qualification__button:hover{
-    /*color:black;*/
-    color: white;
+    color:black;
+    /*color: white;*/
 }
 
 .qualification__icon{
