@@ -17,7 +17,8 @@
 }
 
 .qualification__button:hover{
-    color:black;
+    /*color:black;*/
+    color: white;
 }
 
 .qualification__icon{
@@ -26,9 +27,14 @@
 }
 
 .qualification__active{
-    color:var(--title-color-dark);
-    background-color: var(--title-color);
+    /*color:var(--title-color-dark);*/
+    /*background-color: var(--title-color);*/
     /*color: var(--container-color);*/
+    background-color: var(--title-color);
+    color: hsl(0deg 0% 98.57%);
+    border-radius: 11px;
+    padding: 2px;
+    font-size: medium;
 }
 
 .qualification__sections{
