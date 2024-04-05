@@ -18,7 +18,7 @@ const Header = () => {
 
                     <li className="nav__item">
                         <a href="#about" className="nav__link">
-                            <i className="iuil uil-user nav__icon"></i> About 
+                            <i className="iuil uil-user nav__icon"></i> About
                         </a>
                     </li>
 
@@ -31,6 +31,12 @@ const Header = () => {
                     <li className="nav__item">
                         <a href="#qualification" className="nav__link">
                             <i className="iuil uil-award nav__icon"></i> Qualifications
+                        </a>
+                    </li>
+
+                    <li className="nav__item">
+                        <a href="#certification" className="nav__link">
+                            <i className="iuil uil-trophy nav__icon"></i> Certifications
                         </a>
                     </li>
 
@@ -48,11 +54,11 @@ const Header = () => {
                     </li>
                 </ul>
 
-                <i class="uil uil-times nav__close" onClick={()=> showMenu(!Toggle)}></i>
+                <i class="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i>
             </div>
 
-            <div className="nav__toggle" onClick={()=> showMenu(!Toggle)}>
-              <i class="uil uil-apps"></i>
+            <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
+                <i class="uil uil-apps"></i>
             </div>
         </nav>
     </header>
