@@ -18,7 +18,7 @@ const About = () => {
         I can quickly familiarize myself with new frameworks, programming languages, or tools allowing me to stay up-to-date with industry trends and best practices
         </p>
 
-        <a download ="" href={CV} className="button button--flex">Download CV 
+        <a download ="" href={CV} className="button button--flex">Download Resume
         <i class="uil uil-file-alt"></i></a>
       </div>
       </div>
