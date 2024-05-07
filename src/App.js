@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer'
 import ScrollUp from './components/scrollup/ScrollUp'
 import Work from './components/work/Work'
 import Certification from "./components/certifications/certification";
+import Stats from "./components/stats/Stats";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Qualification />
          <Certification />
         <Work />
+          <Stats />
         <Contact />
         
 

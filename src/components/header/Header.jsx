@@ -46,7 +46,11 @@ const Header = () => {
                         </a>
                     </li>
 
-
+                    <li className="nav__item">
+                        <a href="#stats" className="nav__link">
+                            <i className="iuil uil-chart-growth nav__icon"></i> Github Stats
+                        </a>
+                    </li>
                     <li className="nav__item">
                         <a href="#contact" className="nav__link">
                             <i className="iuil uil-message nav__icon"></i>Contact
