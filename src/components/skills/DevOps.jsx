@@ -8,7 +8,7 @@ const Devops = () => {
         <div className="skills__box">
             <div className="skills__group">
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Docker </h3>
@@ -16,7 +16,7 @@ const Devops = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Kubernetes </h3>
@@ -24,7 +24,7 @@ const Devops = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Minikube </h3>
@@ -32,7 +32,7 @@ const Devops = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Helm</h3>

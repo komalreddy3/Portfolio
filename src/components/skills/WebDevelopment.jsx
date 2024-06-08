@@ -8,7 +8,7 @@ const WebDevelopment = () => {
         <div className="skills__box">
             <div className="skills__group">
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> HTML </h3>
@@ -16,7 +16,7 @@ const WebDevelopment = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> CSS </h3>
@@ -24,14 +24,14 @@ const WebDevelopment = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> JS </h3>
                 </div>
                 </div>
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Bootstrap </h3>
@@ -44,14 +44,14 @@ const WebDevelopment = () => {
             <div className="skills__group">
                 
             <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> NodeJS</h3>
                 </div>
                 </div>
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> ExpressJS</h3>
@@ -59,7 +59,7 @@ const WebDevelopment = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">ReactJS</h3>

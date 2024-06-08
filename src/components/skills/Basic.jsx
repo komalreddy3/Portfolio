@@ -8,7 +8,7 @@ const Basic = () => {
         <div className="skills__box">
             <div className="skills__group">
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Linux </h3>
@@ -16,7 +16,7 @@ const Basic = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Bash Scripting </h3>
@@ -24,7 +24,7 @@ const Basic = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Git </h3>
@@ -32,7 +32,7 @@ const Basic = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> C </h3>
@@ -42,14 +42,14 @@ const Basic = () => {
 
             <div className="skills__group">
             <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> C++ </h3>
                 </div>
                 </div>
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Python </h3>
@@ -57,7 +57,7 @@ const Basic = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Golang </h3>
@@ -65,7 +65,7 @@ const Basic = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">SQL (MySQL,Pgsql)</h3>

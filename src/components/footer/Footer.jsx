@@ -22,23 +22,23 @@ const Footer = () => {
 
         <div className="footer__social">
         <a href="https://github.com/komalreddy3" className="footer__social-link" target="_blank">
-        <i class="bx bxl-github"></i>
+        <i className="bx bxl-github"></i>
         </a>
 
         <a href="https://www.linkedin.com/in/komalreddyk/" className="footer__social-link" target="_blank">
-        <i class="bx bxl-linkedin"></i>
+        <i className="bx bxl-linkedin"></i>
         </a>
 
         <a href="https://www.instagram.com/komalreddyk/" className="footer__social-link" target="_blank">
-        <i class="bx bxl-instagram"></i>
+        <i className="bx bxl-instagram"></i>
         </a>
 
         <a href="https://twitter.com/KomalKReddy" className="footer__social-link" target="_blank">
-        <i class="bx bxl-twitter"></i>
+        <i className="bx bxl-twitter"></i>
         </a>
 
         <a href="https://www.facebook.com/koukuntlakomalreddy/" className="footer__social-link" target="_blank">
-        <i class="bx bxl-messenger"></i>
+        <i className="bx bxl-messenger"></i>
         </a>
         </div>
 

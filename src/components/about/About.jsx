@@ -19,7 +19,7 @@ const About = () => {
         </p>
 
         <a download ="" href={CV} className="button button--flex">Download Resume
-        <i class="uil uil-file-alt"></i></a>
+        <i className="uil uil-file-alt"></i></a>
       </div>
       </div>
     </section>
