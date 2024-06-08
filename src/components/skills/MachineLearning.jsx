@@ -8,7 +8,7 @@ const MachineLearning = () => {
         <div className="skills__box">
             <div className="skills__group">
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">EDA</h3>
@@ -16,7 +16,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">Regressions</h3>
@@ -24,7 +24,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">KNN</h3>
@@ -32,7 +32,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name">SVM</h3>
@@ -42,7 +42,7 @@ const MachineLearning = () => {
 
             <div className="skills__group">
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> D-Trees</h3>
@@ -50,7 +50,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> K- means</h3>
@@ -58,7 +58,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> CV</h3>
@@ -66,7 +66,7 @@ const MachineLearning = () => {
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                <i className='bx bx-badge-check'></i>
 
                 <div>
                     <h3 className="skills__name"> Regularization</h3>
