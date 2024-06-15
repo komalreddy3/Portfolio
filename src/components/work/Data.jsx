@@ -14,88 +14,74 @@ import work11 from "../../assets/ams.png"
 export const projectsData=[
     {
         id:1,
-        image:work1,
-        title:"Movie Recommender - I",
+        imgLink:"https://repository-images.githubusercontent.com/275336521/20d38e00-6634-11eb-9d1f-6a5232d0f84f", // use image instead of imgLink for cards
+        titleDesc:"Movie Recommender - I",
         category:"ML ",
         plink:"https://github.com/komalreddy3/MRS1_PD"
     },
     {
         id:2,
-        image:work2,
-        title:"Movie Recommender - II",
+        imgLink:"https://wallpapers.com/images/hd/monochrome-film-camera-ba5n5i4xdqfz4nom.jpg",
+        titleDesc:"Movie Recommender - II",
         category:"ML ",
         plink:"https://github.com/komalreddy3/MovieRecommendationSystem"
     },
     {
         id:3,
-        image:work3,
-        title:"LetsGrowMore",
+        imgLink:"https://www.simplilearn.com/ice9/free_resources_article_thumb/career_in_Data_Science_V2.jpg",
+        titleDesc:"LetsGrowMore",
         category:"ML ",
         plink:"https://github.com/komalreddy3/LGMVIP--DataScience"
     },
     {
         id:4,
-        image:work4,
-        title:"iNeuron",
+        imgLink:"https://cdn3.f-cdn.com/files/download/32357576/Untitle.png?image-optimizer=force&format=webply&width=1680",
+        titleDesc:"iNeuron",
         category:"ML ",
         plink:"https://github.com/komalreddy3/iNeuron"
     },
     {
         id:5,
-        image:work5,
-        title:"Dice Game",
+        imgLink:"https://www.pianobook.co.uk/wp-content/uploads/2022/02/banner-1-1024x576.jpeg",
+        titleDesc:"Dice Game",
         category:"Web ",
         plink:"https://github.com/komalreddy3/dice"
     },
     {
         id:6,
-        image:work6,
-        title:"Drum Kit",
+        imgLink:"https://i.pinimg.com/originals/df/55/c4/df55c4275241939c08421a86f33951b2.jpg",
+        titleDesc:"Drum Kit",
         category:"Web ",
         plink:"https://github.com/komalreddy3/DrumKit"
     },
     {
         id:7,
-        image:work7,
-        title:"SideBar",
-        category:"Web ",
-        plink:"https://github.com/komalreddy3/Sidebar"
-    },
-    {
-        id:8,
-        image:work8,
-        title:"Keeper App",
+        imgLink:"https://i.pinimg.com/736x/20/e4/84/20e48411c9fdfc088bb24fdb72c9ab85.jpg",
+        titleDesc:"Keeper App",
         category:"Web ",
         plink:"https://github.com/komalreddy3/KeeperApp"
     },
     {
-        id:9,
-        image:work9,
-        title:"Counter App",
+        id:8,
+        imgLink:"https://pbs.twimg.com/media/Fx19I-zWwAEwCa_.jpg:large",
+        titleDesc:"Counter App",
         category:"Web ",
         plink:"https://github.com/komalreddy3/CounterApp"
     },
     {
-        id:10,
-        image:work10,
-        title:"Simon Game",
+        id:9,
+        imgLink:"https://i.pinimg.com/736x/51/f1/ef/51f1efb1c1342b0efce8d2b090987880.jpg",
+        titleDesc:"Simon Game",
         category:"Web ",
         plink:"https://github.com/komalreddy3/SimonGame"
     },
     {
-        id:11,
-        image:work11,
-        title:"School Management App",
+        id:10,
+        imgLink:"https://i.pinimg.com/736x/a1/52/5a/a1525aa2c74d1eb05bf1f41234727bcf.jpg",
+        titleDesc:"School Management App",
         category:"Devops ",
         plink:"https://github.com/komalreddy3/Attendance-go"
-    },
-    {
-        id:12,
-        image:work12,
-        title:"Mongo Kuber App",
-        category:"Devops ",
-        plink:"https://github.com/komalreddy3/KuberMongo"
-    },
+    }
 ]
 
 export const projectsNav=[

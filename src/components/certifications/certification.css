@@ -68,6 +68,13 @@
     color: var(--container-color);
 }
 
+.carousel-outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:992px){
     .certification__container{
         gap:1.25rem;

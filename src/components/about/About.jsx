@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css"
 import AboutImg from "../../assets/profile2.jpg"
-import CV from "../../assets/komalReddyKResume.pdf"
+import CV from "../../assets/Komal Reddy Resume.pdf"
 import Info from "./Info"
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
         </p>
 
         <a download ="" href={CV} className="button button--flex">Download Resume
-        <i class="uil uil-file-alt"></i></a>
+        <i className="uil uil-file-alt"></i></a>
       </div>
       </div>
     </section>
