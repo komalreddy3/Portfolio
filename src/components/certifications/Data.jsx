@@ -18,7 +18,7 @@ import versionControl from "../../assets/Version Control.png"
 import prograamingwithJs from "../../assets/Programming with JS.png"
 import htmlcss from "../../assets/HTML and CSS in depth.png"
 import reactBasics from "../../assets/React basics.png"
-import CodingIP from "../../assets/Coding interview prep.png"
+import codingIP from "../../assets/Coding interview prep.png"
 
 export const certificatesData=[
     {
@@ -179,7 +179,7 @@ export const certificatesData=[
         category:"Lang",
         description:"Data Structure, Pseudo Code, Algorithm",
         plink:"https://coursera.org/share/00ba045fa7b71a907b7314226cb8e845",
-        imgLink: CodingIP,
+        imgLink: codingIP,
     },
 
 
