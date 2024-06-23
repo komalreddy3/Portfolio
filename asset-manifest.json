@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.03d357cb.css",
-    "main.js": "/Portfolio/static/js/main.83ac6c0f.js",
+    "main.css": "/Portfolio/static/css/main.c1f46b92.css",
+    "main.js": "/Portfolio/static/js/main.f883592c.js",
     "static/media/RGNIYD.png": "/Portfolio/static/media/RGNIYD.e652e9f7f98e5957ca43.png",
     "static/media/Intro to frontend.png": "/Portfolio/static/media/Intro to frontend.de9c19c174789b7eabbb.png",
     "static/media/Programming with JS.png": "/Portfolio/static/media/Programming with JS.cab0325ee8a896c60ad9.png",
@@ -33,11 +33,11 @@
     "static/media/LGM.png": "/Portfolio/static/media/LGM.b6703b850e0c6355e33a.png",
     "static/media/Simon.png": "/Portfolio/static/media/Simon.eda0850d8b91287d2d85.png",
     "index.html": "/Portfolio/index.html",
-    "main.03d357cb.css.map": "/Portfolio/static/css/main.03d357cb.css.map",
-    "main.83ac6c0f.js.map": "/Portfolio/static/js/main.83ac6c0f.js.map"
+    "main.c1f46b92.css.map": "/Portfolio/static/css/main.c1f46b92.css.map",
+    "main.f883592c.js.map": "/Portfolio/static/js/main.f883592c.js.map"
   },
   "entrypoints": [
-    "static/css/main.03d357cb.css",
-    "static/js/main.83ac6c0f.js"
+    "static/css/main.c1f46b92.css",
+    "static/js/main.f883592c.js"
   ]
 }
