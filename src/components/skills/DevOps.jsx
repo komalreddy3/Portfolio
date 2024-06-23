@@ -23,21 +23,21 @@ const Devops = () => {
                 </div>
                 </div>
 
-                <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                {/*<div className="skills__data">*/}
+                {/*<i class='bx bx-badge-check'></i>*/}
 
-                <div>
-                    <h3 className="skills__name"> Minikube </h3>
-                </div>
-                </div>
+                {/*<div>*/}
+                {/*    <h3 className="skills__name"> Minikube </h3>*/}
+                {/*</div>*/}
+                {/*</div>*/}
 
-                <div className="skills__data">
-                <i class='bx bx-badge-check'></i>
+                {/*<div className="skills__data">*/}
+                {/*<i class='bx bx-badge-check'></i>*/}
 
-                <div>
-                    <h3 className="skills__name"> Helm</h3>
-                </div>
-                </div>
+                {/*<div>*/}
+                {/*    <h3 className="skills__name"> Helm</h3>*/}
+                {/*</div>*/}
+                {/*</div>*/}
             </div>
 
             <div className="skills__group">

@@ -29,10 +29,11 @@ const Qualification = () => {
                     <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">BTech - CSE</h3>
-                            <span className="qualification__subtitle">National Institute of Technology Manipur</span>
+                            <span className="qualification__subtitle">National Institute of Technology Manipur </span>
+                            <p className="qualification__grade">9.43 CPI</p>
                             <div className="qualification__calender">
                                 <i className="uil uil-calendar-alt"> </i>
-                                2020-Present
+                                2020-2024
                             </div>
                         </div>
 
@@ -51,19 +52,21 @@ const Qualification = () => {
                         <div>
                             <h3 className="qualification__title"> Intermediate</h3>
                             <span className="qualification__subtitle">Sri Chaitanya Junior College</span>
+                            <p className="qualification__grade">97.6 %</p>
                             <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"> </i>
+                                <i className="uil uil-calendar-alt"> </i>
                                 2018-2020
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                     <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">Higher Secondary Education</h3>
                             <span className="qualification__subtitle">Sri Chaitanya Techno School</span>
+                            <p className="qualification__grade">10 GPA</p>
                             <div className="qualification__calender">
                                 <i className="uil uil-calendar-alt"> </i>
                                 2013-2018
@@ -71,7 +74,7 @@ const Qualification = () => {
                         </div>
 
                         <div>
-                            <span className="qualification__rounder"></span>
+                        <span className="qualification__rounder"></span>
                             <span className="qualification__line"></span>
                         </div>
                     </div>
@@ -95,25 +98,41 @@ const Qualification = () => {
                     </div>
                 </div>
 
-                <div className={toggleState===2?"qualification__content qualification__content-active":"qualification__content "}>
-                <div className="qualification__data">
-                    <div></div>
-                    <div>
-                        <span className="qualification__rounder"></span>
-                        <span className="qualification__line"></span>
-                    </div>
+                <div
+                    className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content "}>
+                    <div className="qualification__data">
                         <div>
-                            <h3 className="qualification__title">SDE Backend Intern</h3>
-                            <span className="qualification__subtitle">Devtron Labs - Onsite (Gurgaon)</span>
+                            <h3 className="qualification__title">Software Development Engineer 1</h3>
+                            <span className="qualification__subtitle">Devtron Inc - Onsite (Gurgaon)</span>
                             <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"> </i>
-                                Jan 2024 - Present
+                                <i className="uil uil-calendar-alt"> </i>
+                                June 2024 - Present
                             </div>
                         </div>
 
-                        
+                        <div>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
+                        </div>
                     </div>
-                
+                    <div className="qualification__data">
+                        <div></div>
+                        <div>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
+                        </div>
+                        <div>
+                            <h3 className="qualification__title">SDE Backend Intern</h3>
+                            <span className="qualification__subtitle">Devtron Inc - Onsite (Gurgaon)</span>
+                            <div className="qualification__calender">
+                                <i className="uil uil-calendar-alt"> </i>
+                                Jan 2024 - May 2024
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <div className="qualification__data">
                         <div>
                             <h3 className="qualification__title">Data Science Intern</h3>
@@ -131,21 +150,21 @@ const Qualification = () => {
                     </div>
 
                     <div className="qualification__data">
-                    <div></div>
-                    <div>
-                        <span className="qualification__rounder"></span>
-                        <span className="qualification__line"></span>
-                    </div>
+                        <div></div>
+                        <div>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
+                        </div>
                         <div>
                             <h3 className="qualification__title">Project Intern</h3>
                             <span className="qualification__subtitle">iNeuron.ai - Remote (Bangalore)</span>
                             <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"> </i>
+                                <i className="uil uil-calendar-alt"> </i>
                                 Jan 2023 - Mar 2023
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                     <div className="qualification__data">
@@ -165,21 +184,21 @@ const Qualification = () => {
                     </div>
 
                     <div className="qualification__data">
-                    <div></div>
-                    <div>
-                        <span className="qualification__rounder"></span>
-                        <span className="qualification__line"></span>
-                    </div>
+                        <div></div>
+                        <div>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
+                        </div>
                         <div>
                             <h3 className="qualification__title"> Teaching Assistant</h3>
                             <span className="qualification__subtitle">Coding Ninjas - Remote</span>
                             <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"> </i>
+                                <i className="uil uil-calendar-alt"> </i>
                                 Apr 2022 - Aug 2022
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
