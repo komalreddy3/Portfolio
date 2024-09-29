@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.76d9c093.css",
-    "main.js": "/Portfolio/static/js/main.127f9590.js",
+    "main.js": "/Portfolio/static/js/main.1855c6ce.js",
     "static/media/RGNIYD.png": "/Portfolio/static/media/RGNIYD.e652e9f7f98e5957ca43.png",
     "static/media/Intro to frontend.png": "/Portfolio/static/media/Intro to frontend.de9c19c174789b7eabbb.png",
     "static/media/Programming with JS.png": "/Portfolio/static/media/Programming with JS.cab0325ee8a896c60ad9.png",
@@ -35,10 +35,10 @@
     "static/media/Simon.png": "/Portfolio/static/media/Simon.eda0850d8b91287d2d85.png",
     "index.html": "/Portfolio/index.html",
     "main.76d9c093.css.map": "/Portfolio/static/css/main.76d9c093.css.map",
-    "main.127f9590.js.map": "/Portfolio/static/js/main.127f9590.js.map"
+    "main.1855c6ce.js.map": "/Portfolio/static/js/main.1855c6ce.js.map"
   },
   "entrypoints": [
     "static/css/main.76d9c093.css",
-    "static/js/main.127f9590.js"
+    "static/js/main.1855c6ce.js"
   ]
 }
