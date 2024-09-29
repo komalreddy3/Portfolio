@@ -19,7 +19,7 @@ import prograamingwithJs from "../../assets/Programming with JS.png"
 import htmlcss from "../../assets/HTML and CSS in depth.png"
 import reactBasics from "../../assets/React basics.png"
 import codingIP from "../../assets/Coding interview prep.png"
-
+import advancedReact from "../../assets/advanced react.png"
 export const certificatesData=[
     {
         id:1,
@@ -180,6 +180,14 @@ export const certificatesData=[
         description:"Data Structure, Pseudo Code, Algorithm",
         plink:"https://coursera.org/share/00ba045fa7b71a907b7314226cb8e845",
         imgLink: codingIP,
+    },
+    {
+        id:21,
+        title:"Advanced React",
+        category:"Web",
+        description:"Featch and Post Api, React testing library , best practices",
+        plink:"https://coursera.org/share/e753ca67e38974bfee2d4cc70e9f1385",
+        imgLink: advancedReact,
     },
 
 

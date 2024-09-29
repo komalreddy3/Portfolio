@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css"
 import AboutImg from "../../assets/profile2.jpg"
-import CV from "../../assets/Komal Reddy Resume.pdf"
+import CV from "../../assets/KOMAL_REDDY_RESUME_SOFTWARE_ENGINEER.pdf"
 import Info from "./Info"
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
       <div className="about__data">
         <Info />
 
-        <p className="about__description">
+        <p className="about__description" style={{textAlign:'justify'}}>
         I can quickly familiarize myself with new frameworks, programming languages, or tools allowing me to stay up-to-date with industry trends and best practices
         </p>
 

@@ -44,10 +44,12 @@
     cursor: pointer;
 }
 .arrow-left{
-    left: 1rem;
+    /* left: 1rem; */
+    left: -6rem;
 }
 .arrow-right{
-    right: 1rem;
+    /* right: 1rem; */
+    right: -5rem;
 }
 .indicators{
     display: flex;

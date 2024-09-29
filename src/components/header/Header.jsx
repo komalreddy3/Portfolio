@@ -22,11 +22,11 @@ const Header = () => {
                         </a>
                     </li>
 
-                    <li className="nav__item">
+                    {/* <li className="nav__item">
                         <a href="#skills" className="nav__link">
                             <i className="iuil uil-file-alt nav__icon"></i> Skills
                         </a>
-                    </li>
+                    </li> */}
 
                     <li className="nav__item">
                         <a href="#qualification" className="nav__link">
@@ -46,11 +46,11 @@ const Header = () => {
                         </a>
                     </li>
 
-                    <li className="nav__item">
+                    {/* <li className="nav__item">
                         <a href="#stats" className="nav__link">
                             <i className="iuil uil-chart-growth nav__icon"></i> Github Stats
                         </a>
-                    </li>
+                    </li> */}
                     <li className="nav__item">
                         <a href="#contact" className="nav__link">
                             <i className="iuil uil-message nav__icon"></i>Contact
