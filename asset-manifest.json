@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.76d9c093.css",
-    "main.js": "/Portfolio/static/js/main.1855c6ce.js",
+    "main.js": "/Portfolio/static/js/main.424cc85e.js",
     "static/media/RGNIYD.png": "/Portfolio/static/media/RGNIYD.e652e9f7f98e5957ca43.png",
     "static/media/Intro to frontend.png": "/Portfolio/static/media/Intro to frontend.de9c19c174789b7eabbb.png",
     "static/media/Programming with JS.png": "/Portfolio/static/media/Programming with JS.cab0325ee8a896c60ad9.png",
@@ -27,7 +27,7 @@
     "static/media/AI Forage.png": "/Portfolio/static/media/AI Forage.fa06986db19fbc7d001d.png",
     "static/media/profile2.jpg": "/Portfolio/static/media/profile2.3822096186409ec27496.jpg",
     "static/media/ineuron.png": "/Portfolio/static/media/ineuron.d13afd974af1acbc15d8.png",
-    "static/media/KOMAL_REDDY_RESUME_SOFTWARE_ENGINEER.pdf": "/Portfolio/static/media/KOMAL_REDDY_RESUME_SOFTWARE_ENGINEER.5ddaee7ea7493fbb74af.pdf",
+    "static/media/Komal_Reddy_K_Resume.PDF": "/Portfolio/static/media/Komal_Reddy_K_Resume.ae18e75f1962bfab310a.PDF",
     "static/media/Dice.png": "/Portfolio/static/media/Dice.53c550e96f71ea99618d.png",
     "static/media/Counter.png": "/Portfolio/static/media/Counter.54cba2a704d04476c175.png",
     "static/media/Sidebar.png": "/Portfolio/static/media/Sidebar.9f32c0f0655c0cb35262.png",
@@ -35,10 +35,10 @@
     "static/media/Simon.png": "/Portfolio/static/media/Simon.eda0850d8b91287d2d85.png",
     "index.html": "/Portfolio/index.html",
     "main.76d9c093.css.map": "/Portfolio/static/css/main.76d9c093.css.map",
-    "main.1855c6ce.js.map": "/Portfolio/static/js/main.1855c6ce.js.map"
+    "main.424cc85e.js.map": "/Portfolio/static/js/main.424cc85e.js.map"
   },
   "entrypoints": [
     "static/css/main.76d9c093.css",
-    "static/js/main.1855c6ce.js"
+    "static/js/main.424cc85e.js"
   ]
 }
