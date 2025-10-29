@@ -50,7 +50,7 @@ const Projects = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: i * 0.008 }}
                         >
-                            <img className="proj-thumb" src={p.img} alt={p.title} />
+                            <img className="proj-thumb" src={`${process.env.PUBLIC_URL}${p.img}`} alt={p.title} />
                             <div className="proj-meta">{p.tech}</div>
                             <h5 style={{ marginTop: 8 }}>{p.title}()</h5>
                             {/* <p className="proj-desc">{p.desc}</p> */}
@@ -106,7 +106,7 @@ const Projects = () => {
                             transition={{ duration: 0.4, delay: i * 0.008 }}
                         >
                             {p.img ? (
-                                <img className="proj-thumb" src={p.img} alt={p.title} loading="lazy" />
+                                <img className="proj-thumb" src={`${process.env.PUBLIC_URL}${p.img}`} alt={p.title} loading="lazy" />
                             ) : (
                                 <div className="proj-thumb placeholder"></div>
                             )}

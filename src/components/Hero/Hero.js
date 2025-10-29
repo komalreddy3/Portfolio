@@ -37,7 +37,7 @@ const Hero = () => {
                 >
                     <motion.img
                         className="profile-pic"
-                        src="/profile.png"
+                        src={`${process.env.PUBLIC_URL}/profile.png`}
                         alt="Komal Reddy"
                         loading="lazy"
                         initial={{ opacity: 0, scale: 0.9 }}

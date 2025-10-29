@@ -46,7 +46,7 @@ const Projects = () => {
 
                     >
                         {p.img ? (
-                            <img className="proj-thumb" src={p.img} alt={p.title} loading="lazy" />
+                            <img className="proj-thumb" src={`${process.env.PUBLIC_URL}${p.img}`} alt={p.title} loading="lazy" />
                         ) : (
                             <div className="proj-thumb placeholder"></div>
                         )}
