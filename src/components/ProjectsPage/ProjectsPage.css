@@ -1,0 +1,145 @@
+.projects-page {
+
+    color: #ffffff;
+
+}
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;           /* allows stacking on smaller screens */
+  gap: 12px;                 /* spacing between heading & link */
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+.back-home {
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.back-home:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 🔹 Mobile adjustments */
+@media (max-width: 600px) {
+  .projects-header {
+    flex-direction: column;  /* stack vertically */
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .back-home {
+    font-size: 0.9rem;
+  }
+
+  .section-heading {
+    font-size: 1.4rem;
+  }
+}
+
+
+.accent-ext {
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 20px
+}
+
+.section-title {
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 20px
+}
+
+.projectpage-root {
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.section-heading {
+    color: var(--accent);
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.category-heading {
+    color: var(--accent);
+    margin: 40px 0 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.proj-card {
+    /* border: 1px solid #3b3f43;
+    border-radius: 6px;
+    background: transparent;
+    padding: 12px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    background: transparent;
+    border: 1px solid #3b3f43;
+    padding: 12px;
+    border-radius: 6px;
+    flex: 1 1 calc(33.333% - 18px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    /* smooth height + fade transitions */
+}
+
+.proj-thumb {
+    height: 120px;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.proj-thumb.placeholder {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.proj-meta {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.proj-desc {
+    flex: 1;
+    color: var(--muted);
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+}
+
+.back-home {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}

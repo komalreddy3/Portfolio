@@ -1,0 +1,45 @@
+:root {
+  --muted: #888;
+}
+
+body {
+  background-color: #0b0c10;
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.quote-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+  /* min-height: 100vh; */
+  background-color: inherit;
+}
+
+.quote-box {
+  border: 1px solid #555;
+  padding: 32px 40px;
+  border-radius: 0; /* square corners */
+  max-width: 640px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.quote-text {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.quote-author {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}

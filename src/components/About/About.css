@@ -1,0 +1,27 @@
+.about-text {
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: justify;
+}
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.about-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-title {
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 20px
+}
+.section-title-ext {
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 20px
+}
