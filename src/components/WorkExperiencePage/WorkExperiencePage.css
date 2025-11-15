@@ -1,0 +1,205 @@
+.work-root {
+    /* background-color: var(--background); */
+    background-color: #0f0f0f;
+    color: var(--text-primary);
+    padding-top: 80px;
+}
+
+.work-section {
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    padding-bottom: 5rem;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- Window Grid Styles --- */
+.window-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2.5rem;
+    max-width: 1200px; /* Allow more space for horizontal cards */
+}
+
+.job-window-container {
+    flex: 1 1 400px; /* Flex-grow, flex-shrink, and flex-basis */
+    max-width: 550px;
+    min-width: 320px;
+}
+
+/* --- Job Card Styles --- */
+.job-card-glass {
+    padding: 0; /* Remove padding to let header and content manage it */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform; /* Helps prevent rendering glitches on mobile */
+    overflow: hidden; /* Hide content that might spill out */
+}
+
+.job-card-glass > * {
+    /* Add padding to the direct children instead */
+    padding: 0 2rem;
+}
+
+.job-card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.window-header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem !important; /* Override child padding */
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.window-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.window-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.window-title {
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding-right: 50px; /* Offset for the buttons */
+}
+
+.job-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    /* Add top margin to create space from the window header */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-role {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.job-role .keyword {
+    color: #c678dd; /* A typical 'const' color */
+}
+
+.job-role .string {
+    color: #98c379; /* A typical string color */
+}
+
+.job-company {
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0;
+}
+
+.job-duration {
+    font-family: 'Fira Code', monospace;
+    color: var(--comment);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.commit-log-heading {
+    font-family: 'Fira Code', monospace;
+    color: var(--comment);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.commit-log {
+    list-style-type: '» ';
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem; /* Add space at the bottom of the card */
+}
+
+.commit-log li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tech-stack-heading {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background-color: var(--accent-trans);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .work-header {
+        /* justify-content: center; */
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+        flex-basis: 100%; /* Allow the heading to take full width and wrap */
+        margin-bottom: 1rem;
+    }
+
+    .window-grid {
+        gap: 1.5rem;
+    }
+
+    .job-window-container {
+        /* On mobile, each card takes the full width */
+        flex-basis: 100%;
+    }
+
+    .job-role {
+        font-size: 1.1rem;
+    }
+}

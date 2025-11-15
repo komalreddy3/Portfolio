@@ -57,18 +57,23 @@ const Header = () => {
                         <span className="link-ext">.js</span>
                     </NavLink>
 
-                    <NavLink to="/projects" end className="nav-link-custom" onClick={closeMenu}>
-                        <span className="link-name">projects</span>
+                    <NavLink to="/aboutme" end className="nav-link-custom" onClick={closeMenu}>
+                        <span className="link-name">backStory</span>
                         <span className="link-ext">.js</span>
                     </NavLink>
 
-                    <NavLink to="/aboutme" end className="nav-link-custom" onClick={closeMenu}>
-                        <span className="link-name">aboutMe</span>
+                    <NavLink to="/projects" end className="nav-link-custom" onClick={closeMenu}>
+                        <span className="link-name">chaosWare</span>
+                        <span className="link-ext">.js</span>
+                    </NavLink>
+
+                    <NavLink to="/experience" end className="nav-link-custom" onClick={closeMenu}>
+                        <span className="link-name">releaseNotes</span>
                         <span className="link-ext">.js</span>
                     </NavLink>
 
                     <NavLink to="/contact" end className="nav-link-custom" onClick={() => { closeMenu(); }}>
-                        <span className="link-name">contact</span>
+                        <span className="link-name">ping</span>
                         <span className="link-ext">.js</span>
                     </NavLink>
                 </nav>

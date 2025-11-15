@@ -11,7 +11,7 @@ const Contact = () => (
         <div className="contact-header">
             <div className="contact-title-wrap">
                 <h2>
-                    <span className="section-title">contact</span>
+                    <span className="section-title">ping</span>
                     <span className="section-title-ext">.js</span>
                 </h2>
             </div>
