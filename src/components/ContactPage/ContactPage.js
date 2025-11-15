@@ -22,7 +22,7 @@ const ContactPage = () => {
                         {backArrow} I'm lost, take me home
                     </Link>
                 </div>
-                <div className="d-flex gap-4 flex-wrap align-items-start">
+                <div className="gap-4 flex-wrap align-items-start">
                     <div className='d-flex align-items-center contact-container contact-text'>
                         <p>Something cool to share? Drop a message! I may not reply faster than your favorite delivery app, but hey — I try.</p>
                         <div className="contact-card mt-2">
