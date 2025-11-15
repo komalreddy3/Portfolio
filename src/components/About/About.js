@@ -11,7 +11,7 @@ const About = () => {
                 <div className="about-header">
                     <div className="about-title-wrap">
                         <h2>
-                            <span className="section-title">aboutMe</span>
+                            <span className="section-title">backStory</span>
                             <span className="section-title-ext">.js</span>
                         </h2>
                     </div>
