@@ -24,7 +24,7 @@ const ContactPage = () => {
                 </div>
                 <div className="gap-4 flex-wrap align-items-start">
                     <div className='d-flex align-items-center contact-container contact-text'>
-                        <p>Something cool to share? Drop a message! I may not reply faster than your favorite delivery app, but hey — I try.</p>
+                        <p>Something cool to share? Drop a message! I may not reply faster than your favorite delivery app, but hey I try.</p>
                         <div className="contact-card mt-2">
                             <p className='section-title'>Message me here !</p>
                             <div className="contact-item">
