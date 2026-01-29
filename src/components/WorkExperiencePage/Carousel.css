@@ -153,4 +153,56 @@
   .electric-wrapper {
     border-radius: 22px; 
   }
+
+
+  @media (max-width: 768px) {
+    .work-card.glass {
+      padding: 16px;
+      width: 90vw;
+    }
+  
+    .work-card h2 {
+      font-size: 1.1rem;
+    }
+  
+    .company {
+      font-size: 0.8rem;
+    }
+  
+    .commit-log li {
+      font-size: 0.8rem;
+    }
+  
+    .tech-pill {
+      font-size: 0.65rem;
+      padding: 4px 10px;
+    }
+    .duration {
+        font-size: 0.8rem ;
+    }
+  }
+  
+  .mobile-swipe-hints {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding: 0 12px;
+    user-select: none;
+  }
+  
+  .swipe-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: rgba(198, 120, 221, 0.15);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #c678dd;
+    user-select: none;
+  }
+  
   
