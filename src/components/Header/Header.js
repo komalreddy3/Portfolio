@@ -42,7 +42,7 @@ const Header = () => {
                     <div className="header-location">
                         <MapPinHouseIcon className="location-icon" size={16} />
                         <span className="location-text desktop-only">Hyderabad, India</span>
-                        <span className="location-text mobile-only">Hyd,India</span>
+                        <span className="location-text mobile-only">Hyderabad,India</span>
                     </div>
                 </div>
 

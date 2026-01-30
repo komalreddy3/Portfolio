@@ -20,6 +20,11 @@
   font-weight: 600;
   color: #fff;
   text-decoration: none;
+
+   display: inline-block;   /* allows wrapping */
+    max-width: 100%;         /* stays within container */
+    white-space: normal;     /* allows wrapping */
+    word-break: break-word;  /* breaks long words if needed */
 }
 
 /* ==== Navigation ==== */
@@ -216,6 +221,11 @@
     .header-root{
       padding:0;
       /* padding-top:2rem; */
-      padding-bottom: 2rem;
+      /* padding-bottom: 2rem; */
+      
+    }
+     .header-brand {
+        font-size: 1.8rem;
     }
 }
+
