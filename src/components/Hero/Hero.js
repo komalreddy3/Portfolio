@@ -4,7 +4,7 @@ import './Hero.css';
 import { useEffect } from 'react';
 import TextType from './TextType';
 
-const tagline = "I engineer full-stack solutions where ${(() => `${'Backend efficiency'} fuels ${'frontend creativity'}`)()}. Debug my journey, inspect my projects, and test my skills. Go ahead, everything's in beta, including me.";
+const tagline = "I engineer full-stack systems where ${'data flows'} and ${'pixels glow'}. Debug my journey, inspect my projects, and test my skills. Go ahead, everything's in beta, including me.";
 
 const Hero = () => {
 
