@@ -16,7 +16,10 @@
     animation: fadeIn 0.5s forwards;
     padding-bottom: 5rem;
 }
-
+.work-section {
+  padding: 2rem 0;
+  color: var(--muted);
+}
 .work-header {
     display: flex;
     justify-content: space-between;

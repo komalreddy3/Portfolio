@@ -10,7 +10,7 @@ const ContactPage = () => {
     const backArrow = "<~~~"
     return (
         <div className="contact-page-root">
-            <motion.section id="contact" className="section container-custom" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: false }}>
+            <motion.section id="contact" className="section contact-section container-custom" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: false }}>
                 <div className="contact-header">
                     <h2 className="section-heading">
                         <span className="accent-ext">&lt;</span>

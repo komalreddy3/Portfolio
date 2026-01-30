@@ -26,7 +26,7 @@ const Projects = () => {
 
     return (
         <div className="projectpage-root">
-            <section id="projects-page" className="section container-custom projects-page">
+            <section id="projects-page" className="section container-custom projects-page project-section">
                 <div className="projects-header">
                     <h2 className="section-heading">
                         <span className="accent-ext">&lt;</span>

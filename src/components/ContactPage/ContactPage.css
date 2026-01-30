@@ -22,7 +22,10 @@
   padding-bottom: 8rem;
 }
 
-
+.contact-section {
+  padding: 2rem 0;
+  color: var(--muted);
+}
 .contact-icon {
   color: var(--accent, #ff69b4);
   font-size: 1.1rem;
