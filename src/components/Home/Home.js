@@ -21,7 +21,7 @@ const Home = () => {
             <About />
 
             <Contact />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

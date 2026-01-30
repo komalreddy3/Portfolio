@@ -73,7 +73,7 @@ const WorkExperiencePage = () => {
                 <WorkExperienceCarousel workHistory={workHistory} />
             </motion.section>
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

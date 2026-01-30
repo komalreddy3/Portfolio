@@ -27,6 +27,21 @@
 .App-link {
   color: #61dafb;
 }
+:root {
+  --dock-height: 4rem;
+}
+
+/* :root {
+  --dock-height: 80px;
+} */
+
+/* THIS is the important part */
+.app {
+  min-height: 100vh;
+  padding-bottom: calc(var(--dock-height) + env(safe-area-inset-bottom));
+}
+
+
 
 @keyframes App-logo-spin {
   from {

@@ -101,7 +101,7 @@ const AboutMe = () => {
 
 
             </motion.section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

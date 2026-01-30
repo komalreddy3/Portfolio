@@ -16,7 +16,7 @@
 }
 
 .header-brand {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -125,6 +125,10 @@
     font-size: 1rem;
     width: 100%;
   }
+  .header-icons a svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* Smooth container spacing */
@@ -136,3 +140,20 @@
   max-width: 1200px;
   margin: 0 auto;
 } */
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.header-icons a {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.header-icons a:hover {
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+}

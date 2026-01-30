@@ -11,6 +11,7 @@ import { useLocation } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
 import AboutMe from './components/AboutPage/AboutPage';
 import WorkExperiencePage from './components/WorkExperiencePage/WorkExperiencePage';
+import BottomDock from './components/Header/BottomDock';
 function App() {
   const location = useLocation();
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/experience" element={<WorkExperiencePage />} />
         </Routes>
-     
+      <BottomDock />
     </>
   );
 }

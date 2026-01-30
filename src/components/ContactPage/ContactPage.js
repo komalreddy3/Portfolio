@@ -48,7 +48,7 @@ const ContactPage = () => {
                     </div>
                 </div>
             </motion.section>
-             <Footer />
+             {/* <Footer /> */}
         </div>
     );
 }

@@ -6,7 +6,8 @@
     background-color: #0f0f0f;
     min-height: 100vh;
     overflow-x: hidden;
-    padding-top: 80px;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
 }
 
 .work-section {
@@ -38,18 +39,21 @@
     justify-content: center;
     margin: 0 auto;
     gap: 2.5rem;
-    max-width: 1200px; /* Allow more space for horizontal cards */
+    max-width: 1200px;
+    /* Allow more space for horizontal cards */
 }
 
 .job-window-container {
-    flex: 1 1 400px; /* Flex-grow, flex-shrink, and flex-basis */
+    flex: 1 1 400px;
+    /* Flex-grow, flex-shrink, and flex-basis */
     max-width: 550px;
     min-width: 320px;
 }
 
 /* --- Job Card Styles --- */
 .job-card-glass {
-    padding: 0; /* Remove padding to let header and content manage it */
+    padding: 0;
+    /* Remove padding to let header and content manage it */
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -57,11 +61,13 @@
     border: 1px solid var(--glass-border);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform; /* Helps prevent rendering glitches on mobile */
-    overflow: hidden; /* Hide content that might spill out */
+    will-change: transform;
+    /* Helps prevent rendering glitches on mobile */
+    overflow: hidden;
+    /* Hide content that might spill out */
 }
 
-.job-card-glass > * {
+.job-card-glass>* {
     /* Add padding to the direct children instead */
     padding: 0 2rem;
 }
@@ -75,7 +81,8 @@
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem 1.5rem !important; /* Override child padding */
+    padding: 0.75rem 1.5rem !important;
+    /* Override child padding */
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -97,7 +104,8 @@
     font-family: 'Fira Code', monospace;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    padding-right: 50px; /* Offset for the buttons */
+    padding-right: 50px;
+    /* Offset for the buttons */
 }
 
 .job-header {
@@ -119,11 +127,13 @@
 }
 
 .job-role .keyword {
-    color: #c678dd; /* A typical 'const' color */
+    color: #c678dd;
+    /* A typical 'const' color */
 }
 
 .job-role .string {
-    color: #98c379; /* A typical string color */
+    color: #98c379;
+    /* A typical string color */
 }
 
 .job-company {
@@ -151,7 +161,8 @@
     list-style-type: '» ';
     padding-left: 20px;
     margin-bottom: 1.5rem;
-    padding-bottom: 1rem; /* Add space at the bottom of the card */
+    padding-bottom: 1rem;
+    /* Add space at the bottom of the card */
 }
 
 .commit-log li {
@@ -190,7 +201,8 @@
 
     .section-heading {
         font-size: 1.5rem;
-        flex-basis: 100%; /* Allow the heading to take full width and wrap */
+        flex-basis: 100%;
+        /* Allow the heading to take full width and wrap */
         margin-bottom: 1rem;
     }
 
@@ -206,7 +218,8 @@
     .job-role {
         font-size: 1.1rem;
     }
-    .work-header{
-    margin-bottom: 1rem;
+
+    .work-header {
+        margin-bottom: 1rem;
     }
 }
