@@ -64,12 +64,17 @@
         0 0 14px rgba(198, 120, 221, 0.6),
         inset 0 0 0 1px rgba(198, 120, 221, 0.4);
 }
+.dock-root {
+    height: var(--dock-height);
+    margin-bottom: 1rem;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
     .dock-root {
         width: calc(100% - 24px);
         justify-content: space-around;
+        margin-bottom: 0.2rem;
     }
 
     .dock-item {
@@ -83,7 +88,3 @@
     }
 }
 
-.dock-root {
-    height: var(--dock-height);
-    margin-bottom: 2rem;
-}
