@@ -30,7 +30,7 @@ const Projects = () => {
                 <div className="projects-header">
                     <h2 className="section-heading">
                         <span className="accent-ext">&lt;</span>
-                        <span className="section-title">ChaosWare&nbsp;</span>
+                        <span className="section-title">Chaos&nbsp;</span>
                         <span className="accent-ext">/&gt;</span>
                     </h2>
 

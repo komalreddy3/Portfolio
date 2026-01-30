@@ -26,7 +26,7 @@ const Projects = () => {
             <div className="projects-header d-flex justify-content-between align-items-center">
                 <div className="projects-title-wrap">
                     <h2>
-                        <span className="section-title">chaosWare</span>
+                        <span className="section-title">chaos</span>
                         <span className="section-title-ext">.js</span>
                     </h2>
                 </div>

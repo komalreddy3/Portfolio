@@ -5,7 +5,7 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Github, Linkedin, Mail } from "lucide-react";
-
+import { MapPinHouseIcon } from "lucide-react";
 const Header = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
@@ -37,8 +37,14 @@ const Header = () => {
         <header className={`header-root ${scrolled ? 'scrolled' : ''}`}>
             <div className="container-custom d-flex align-items-center justify-content-between">
                 <div className="header-brand"> <Link to="/" className="header-brand">
-                    Komal Reddy Koukuntla 
-                </Link></div>
+                    Komal Reddy Koukuntla
+                </Link>
+                    <div className="header-location">
+                        <MapPinHouseIcon className="location-icon" size={16} />
+                        <span className="location-text desktop-only">Hyderabad, India</span>
+                        <span className="location-text mobile-only">Hyd,India</span>
+                    </div>
+                </div>
 
                 <div className="header-icons">
                     <a
