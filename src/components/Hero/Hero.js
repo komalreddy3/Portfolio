@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
 import { useEffect } from 'react';
+import TextType from './TextType';
+
 const tagline = "I engineer full-stack solutions where ${(() => `${'Backend efficiency'} fuels ${'frontend creativity'}`)()}. Debug my journey, inspect my projects, and test my skills. Go ahead, everything's in beta, including me.";
 
 const Hero = () => {
@@ -10,7 +12,22 @@ const Hero = () => {
         <section id="home" className="hero container-custom">
             <motion.div className="hero-left" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: false }} layout>
                 <div className="title">useState(<span className="accent">"Komal Reddy - Software Engineer"</span>);</div>
-                <p className="subtitle">{tagline}</p>
+                {/* <p className="subtitle">{tagline}</p> */}
+                <div className="typing-wrapper">
+                    <TextType
+                        text={[`${tagline}`]}
+                        typingSpeed={40}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="█"
+                        texts={[`${tagline}`]}
+                        deletingSpeed={3}
+                        variableSpeedEnabled={false}
+                        variableSpeedMin={60}
+                        variableSpeedMax={120}
+                        cursorBlinkDuration={0.5}
+                    />
+                </div>
                 <a className="btn-ghost" href="#contact">Contact me !!</a>
 
             </motion.div>
@@ -18,7 +35,7 @@ const Hero = () => {
                 className="hero-right"
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                layout 
+                layout
                 transition={{
                     duration: 0.8,
                     delay: 0.05,

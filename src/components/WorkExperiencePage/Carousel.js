@@ -27,19 +27,19 @@ const variants = {
 // Detect mobile
 function useIsMobile(breakpoint = 768) {
     const [isMobile, setIsMobile] = useState(
-      typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+        typeof window !== "undefined" ? window.innerWidth < breakpoint : false
     );
-  
+
     useEffect(() => {
-      const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
-      window.addEventListener("resize", handleResize);
-  
-      // cleanup
-      return () => window.removeEventListener("resize", handleResize);
+        const handleResize = () => setIsMobile(window.innerWidth < breakpoint);
+        window.addEventListener("resize", handleResize);
+
+        // cleanup
+        return () => window.removeEventListener("resize", handleResize);
     }, [breakpoint]);
-  
+
     return isMobile;
-  }
+}
 
 export default function WorkExperienceCarousel({ workHistory }) {
     const [[index, direction], setIndex] = useState([0, 0]);
@@ -68,7 +68,7 @@ export default function WorkExperienceCarousel({ workHistory }) {
     return (
         <div className="carousel-root">
             {/* Mobile Electric toggle */}
-            {isMobile && (
+            {/* {isMobile && (
                 <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
                     <button
                         style={{
@@ -85,13 +85,38 @@ export default function WorkExperienceCarousel({ workHistory }) {
                         {electricOn ? "Tap to Chill !" : "Tap to Spark ⚡ "}
                     </button>
                 </div>
-            )}
+            )} */}
+            {/* Mobile Electric toggle */}
+            {/* {isMobile && ( */}
+
+            <div className="electric-toggle-wrapper">
+                <span className={`toggle-label ${electricOn ? "on" : ""}`}>
+                    {electricOn ? "Spark⚡" : "Chill"}
+                </span>
+
+                <div
+                    className={`electric-toggle ${electricOn ? "active" : ""}`}
+                    onClick={() => setElectricOn((prev) => !prev)}
+                >
+                    <motion.div
+                        className="toggle-thumb"
+                        layout
+                        transition={{
+                            type: "spring",
+                            stiffness: 500,
+                            damping: 30,
+                        }}
+                    />
+                </div>
+            </div>
+            {/* )} */}
+
 
             <AnimatePresence custom={direction} mode="wait">
                 <ElectricBorder
                     color="#c678dd"
-                    speed={electricOn || (!isMobile && isPaused) ? 1.4 : 0}
-                    chaos={electricOn || (!isMobile && isPaused) ? 0.2 : 0}
+                    speed={electricOn ? 1.4 : 0}
+                    chaos={electricOn ? 0.2 : 0}
                     thickness={2}
                     radius={22}
                     className="electric-wrapper"

@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -205,5 +205,8 @@
 
     .job-role {
         font-size: 1.1rem;
+    }
+    .work-header{
+    margin-bottom: 1rem;
     }
 }

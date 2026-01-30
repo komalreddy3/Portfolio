@@ -163,3 +163,9 @@
         height: 180px
     }
 }
+.typing-wrapper {
+  min-height: 28px;   /* adjust based on font-size */
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
