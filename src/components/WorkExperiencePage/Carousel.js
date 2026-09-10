@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Carousel.css";
-import ElectricBorder from "./ElectricBorder";
 
 const AUTO_PLAY_DELAY = 2500;
 
@@ -45,7 +44,6 @@ export default function WorkExperienceCarousel({ workHistory }) {
     const [[index, direction], setIndex] = useState([0, 0]);
     const [isPaused, setIsPaused] = useState(false);
     const [showAllCommits, setShowAllCommits] = useState(false);
-    const [electricOn, setElectricOn] = useState(false);
 
     const isMobile = useIsMobile();
     const job = workHistory[index];
@@ -87,40 +85,8 @@ export default function WorkExperienceCarousel({ workHistory }) {
                 </div>
             )} */}
             {/* Mobile Electric toggle */}
-            {/* {isMobile && ( */}
-
-            <div className="electric-toggle-wrapper">
-                <span className={`toggle-label ${electricOn ? "on" : ""}`}>
-                    {electricOn ? "Spark⚡" : "Chill"}
-                </span>
-
-                <div
-                    className={`electric-toggle ${electricOn ? "active" : ""}`}
-                    onClick={() => setElectricOn((prev) => !prev)}
-                >
-                    <motion.div
-                        className="toggle-thumb"
-                        layout
-                        transition={{
-                            type: "spring",
-                            stiffness: 500,
-                            damping: 30,
-                        }}
-                    />
-                </div>
-            </div>
-            {/* )} */}
-
-
             <AnimatePresence custom={direction} mode="wait">
-                <ElectricBorder
-                    color="#c678dd"
-                    speed={electricOn ? 1.4 : 0}
-                    chaos={electricOn ? 0.2 : 0}
-                    thickness={2}
-                    radius={22}
-                    className="electric-wrapper"
-                >
+                <div className="carousel-card-cyber-frame">
                     <motion.div
                         key={index}
                         className="work-card glass"
@@ -184,7 +150,7 @@ export default function WorkExperienceCarousel({ workHistory }) {
                             ))}
                         </div>
                     </motion.div>
-                </ElectricBorder>
+                </div>
             </AnimatePresence>
 
             {/* Mobile swipe hints */}

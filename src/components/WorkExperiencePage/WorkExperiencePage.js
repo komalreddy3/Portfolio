@@ -12,14 +12,14 @@ const workHistory = [
         duration: "// Jul 2024 - Present",
         logo: `${process.env.PUBLIC_URL}/appzoy.png`,
         commitLog: [
-            "feat: Hooked up event-driven DICOM processing with Orthanc,because radiology images apparently enjoy triggering events too.",
+            "feat: Hooked up event-driven DICOM processing with Orthanc, because radiology images apparently enjoy triggering events too.",
             "feat: Integrated HL7 V2 parser for smooth HMS & LIS gossip sessions",
-            "feat: OpenAI apis integrations",
-            "fix: Resolved data-persistence mysteries.Turns out data does like to stay… if you treat it nicely",
-            "refactor: Containerized services using Docker Swarm with secure secret management to tighten security and improve deployment robustness atleast tried to",
+            "feat: Developed AI integrations in a dedicated service using OpenAI APIs",
+            "fix: Resolved data-persistence mysteries. Turns out data does like to stay… if you treat it nicely",
+            "refactor: Containerized core system components using Docker Swarm with secure secret management",
             "doc: Documented features/bugs so thoroughly even ChatGPT would say: 'Bro, that's enough.'"
         ],
-        techStack: ["React", "Node.js", "Docker", "Python"],
+        techStack: ["React", "Node.js", "Docker Swarm", "Python"],
     },
     {
         role: "SDE",
@@ -41,7 +41,7 @@ const workHistory = [
         logo: `${process.env.PUBLIC_URL}/devtron.png`,
         commitLog: [
             "Initial commit: 'hello world' -> calm before the storm.",
-            "chore: Optimised Go APIs without breaking whole cluster (Phew!)",
+            "chore: Worked on CLI integrations without breaking whole cluster (Phew!)",
             "feat: Upgraded Devtron's CLI with shiny new commands for update, deletion and notification settings — because who doesn't love more commands?",
             "chore: Learned Linux the hard way — permissions, processes, and why sudo is both friend and enemy.",
             "feat: Finally understood Git beyond `git pull` and `git push` — rebases were scary, but worth it."

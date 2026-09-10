@@ -1,0 +1,146 @@
+.contact-mission-root {
+  padding: 80px 20px 140px 20px;
+  position: relative;
+}
+
+.contact-mission-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.text-center {
+  text-align: center;
+  align-items: center;
+}
+
+.contact-terminal-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: rgba(18, 23, 34, 0.8);
+  border: 1px solid var(--cyber-border);
+}
+
+.contact-prompt-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-humor-text {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyber-text-dim);
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(10, 14, 22, 0.6);
+  border: 1px solid var(--cyber-border);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.channel-card:hover {
+  border-color: var(--cyber-purple);
+  background: rgba(185, 127, 246, 0.06);
+}
+
+.channel-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--cyber-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--cyber-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.channel-link {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--cyber-text);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channel-link:hover {
+  color: var(--cyber-cyan);
+}
+
+.channel-copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--cyber-text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.channel-copy-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-footer-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 600px) {
+  .contact-terminal-card {
+    padding: 20px;
+  }
+}

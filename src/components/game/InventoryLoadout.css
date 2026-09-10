@@ -1,0 +1,112 @@
+.loadout-root {
+  padding: 80px 20px;
+  position: relative;
+}
+
+.loadout-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.loadout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.loadout-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(18, 23, 34, 0.7);
+  border: 1px solid var(--cyber-border);
+  transition: all 0.25s ease;
+}
+
+.loadout-card:hover {
+  border-color: var(--cyber-cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.loadout-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slot-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cyber-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tier-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tier-badge.legendary {
+  background: rgba(255, 170, 0, 0.2);
+  color: var(--cyber-amber);
+  border: 1px solid var(--cyber-amber);
+}
+
+.tier-badge.epic {
+  background: rgba(185, 127, 246, 0.2);
+  color: var(--cyber-purple);
+  border: 1px solid var(--cyber-purple);
+}
+
+.tier-badge.rare {
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--cyber-cyan);
+  border: 1px solid var(--cyber-cyan);
+}
+
+.loadout-main-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loadout-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--cyber-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.loadout-name {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.loadout-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cyber-text-dim);
+  line-height: 1.45;
+}
+
+.text-amber { color: var(--cyber-amber); }
+.text-purple { color: var(--cyber-purple); }
+.text-cyan { color: var(--cyber-cyan); }
+.text-green { color: var(--cyber-green); }
+.text-dim { color: var(--cyber-text-dim); }

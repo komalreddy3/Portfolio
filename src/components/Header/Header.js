@@ -1,11 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
-import { Link } from 'react-router-dom';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Github, Linkedin, Mail } from "lucide-react";
-import { MapPinHouseIcon } from "lucide-react";
+import { Github, Linkedin, Mail, MapPinHouseIcon } from "lucide-react";
+import DesktopNav from './DesktopNav';
+
 const Header = () => {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
@@ -88,7 +86,7 @@ const Header = () => {
                 </div> */}
 
                 {/* Navigation Links */}
-                {/* <nav className={`header-nav ${menuOpen ? 'show' : ''}`}>
+                <nav className={`header-nav ${menuOpen ? 'show' : ''}`}>
                     <NavLink to="/" end className="nav-link-custom" onClick={closeMenu}>
                         <span className="link-name">home</span>
                         <span className="link-ext">.js</span>
@@ -113,8 +111,9 @@ const Header = () => {
                         <span className="link-name">ping</span>
                         <span className="link-ext">.js</span>
                     </NavLink>
-                </nav> */}
+                </nav>
             </div>
+            <DesktopNav />
         </header>
     );
 };

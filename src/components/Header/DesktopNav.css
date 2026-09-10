@@ -1,0 +1,57 @@
+.desktop-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 0;
+  background: rgba(18, 23, 34, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cyber-border);
+}
+
+.desktop-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--cyber-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.desktop-nav .nav-item:hover {
+  background: rgba(185, 127, 246, 0.12);
+  border-color: var(--cyber-purple);
+  color: #fff;
+}
+
+.desktop-nav .nav-item.active {
+  background: rgba(185, 127, 246, 0.22);
+  border-color: var(--cyber-purple);
+  color: #fff;
+}
+
+.desktop-nav .nav-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Show on desktop (redundant, but explicit) */
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: flex;
+  }
+}

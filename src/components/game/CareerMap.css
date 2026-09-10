@@ -1,0 +1,363 @@
+.career-map-root {
+  padding: 80px 20px;
+  position: relative;
+}
+
+.career-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section-title-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.title-tag {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
+  gap: 6px;
+}
+
+.accent-bracket {
+  color: var(--cyber-purple);
+}
+
+.section-subtitle {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--cyber-text-dim);
+}
+
+/* Stepper Bar */
+.career-stepper-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: rgba(14, 18, 27, 0.7);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--cyber-border);
+}
+
+.stepper-node {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.stepper-node:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stepper-node.selected {
+  background: rgba(185, 127, 246, 0.15);
+  border-color: var(--cyber-purple);
+  box-shadow: 0 0 16px rgba(185, 127, 246, 0.2);
+}
+
+.stepper-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--cyber-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepper-node.selected .stepper-dot {
+  background: var(--cyber-purple);
+  border-color: var(--cyber-purple);
+}
+
+.stepper-level-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stepper-meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.stepper-company {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.stepper-role {
+  font-size: 0.72rem;
+  color: var(--cyber-text-dim);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.stepper-arrow {
+  color: var(--cyber-text-muted);
+  position: absolute;
+  right: -8px;
+  z-index: 2;
+}
+
+/* Career Holo Frame */
+.career-card-wrapper {
+  position: relative;
+}
+
+.career-holo-frame {
+  position: relative;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(185, 127, 246, 0.4), rgba(0, 240, 255, 0.25), rgba(185, 127, 246, 0.1));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(185, 127, 246, 0.15);
+}
+
+.corner-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--cyber-cyan);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.corner-bracket.top-left {
+  top: -4px;
+  left: -4px;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-bracket.top-right {
+  top: -4px;
+  right: -4px;
+  border-width: 2px 2px 0 0;
+}
+
+.corner-bracket.bottom-left {
+  bottom: -4px;
+  left: -4px;
+  border-width: 0 0 2px 2px;
+}
+
+.corner-bracket.bottom-right {
+  bottom: -4px;
+  right: -4px;
+  border-width: 0 2px 2px 0;
+}
+
+.career-card-inner {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(16, 21, 31, 0.9);
+}
+
+.stage-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.stage-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stage-level-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyber-purple);
+  letter-spacing: 0.05em;
+}
+
+.current-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 255, 136, 0.15);
+  color: var(--cyber-green);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+}
+
+.stage-role-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--font-mono);
+  color: #fff;
+}
+
+.stage-company-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--cyber-text-dim);
+  flex-wrap: wrap;
+}
+
+.stage-company-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.company-name {
+  color: var(--cyber-cyan);
+}
+
+.company-logo-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--cyber-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.stage-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.stage-summary-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--cyber-text);
+  line-height: 1.6;
+}
+
+/* Commits List */
+.stage-commit-block {
+  background: rgba(10, 13, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commit-log-header {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--cyber-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.stage-commits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.commit-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.commit-hash {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--cyber-purple);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.commit-text {
+  color: var(--cyber-text-dim);
+}
+
+/* Tech Footer */
+.stage-tech-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tech-footer-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--cyber-text-muted);
+  font-weight: 700;
+}
+
+.stage-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: var(--cyber-cyan);
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.section-header-wrapper {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
