@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
 import { runCommand, commandRegistry } from "../../commands/registry";
 import { listDirectory, resolvePath } from "../../virtualFS";

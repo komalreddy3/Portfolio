@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
 
 export default function AchievementToast() {

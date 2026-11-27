@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { useAppContext } from "./context/AppContext";
 import { useKeyboardShortcuts } from "./hooks/useKeyboardShortcuts";
 import TopHUD from "./components/common/TopHUD";

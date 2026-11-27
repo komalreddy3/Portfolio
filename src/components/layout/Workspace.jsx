@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Explorer from "../explorer/Explorer";
 import Terminal from "../terminal/Terminal";
 import EditorPanel from "../editor/EditorPanel";

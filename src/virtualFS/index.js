@@ -1,4 +1,4 @@
-﻿// Virtual Filesystem - mirrors portfolioData as navigable file tree
+// Virtual Filesystem - mirrors portfolioData as navigable file tree
 import { portfolioData as pd } from "../data/portfolioData";
 
 const { character, careerPath, quests, skillCategories } = pd;
@@ -101,79 +101,69 @@ ${q.rolllink ? `- Live: ${q.rolllink}` : ""}
   });
 
   // /quests/ - discovery quest files
-  files["/quests/01-identity.md"] = `# Quest 1: Identity
-Discover who the developer behind this portfolio is.
+  files["/quests/01-identity.md"] = `# Quest 1: Clean Up a Profile
+Write a JavaScript function that cleans up a name, handle, and location.
 
-## Clues
-1. Read /about.md to learn the basics.
-2. Find the hidden .secret in /hidden/ directory.
-3. Run \`whoami\` in the terminal.
+## Your Task
+Run \`challenge 1\` and finish the \`normalizeIdentity(profile)\` function.
 
-## Unlock Condition
-Read /about.md and discover the hidden identity file.
+## Extra Things to Find
+Read \`/about.md\`, find \`/hidden/.secret\`, and run \`whoami\`.
 
 ## Hint
-The developer is a full-stack engineer who graduated from NIT Manipur.
+Use the string tools \`trim()\` and \`toLowerCase()\`. Return a new object.
 `;
 
-  files["/quests/02-techstack.md"] = `# Quest 2: Technical Stack
-Explore the technologies this developer works with.
+  files["/quests/02-techstack.md"] = `# Quest 2: Remove Duplicate Imaging Events
+Write a JavaScript function that removes older copies of imaging updates.
 
-## Clues
-1. Run \`cat /skills.md\` to see all tech categories.
-2. Explore /experience/ to see tech used in real work.
-3. Read the most recent career file to find the current stack.
+## Your Task
+Run \`challenge 2\` and finish the \`dedupeStudyEvents(events)\` function.
 
-## Unlock Condition
-Read both /skills.md and the latest experience file.
+## Extra Things to Find
+Read \`/experience/appzoy.md\` and \`/skills.md\`, then run \`skills\`.
 
 ## Hint
-Look for Kubernetes, Docker, Go, and healthcare-specific tools like DICOM.
+Use the study ID and update type to group events. Keep the event with the largest revision number.
 `;
 
-  files["/quests/03-projects.md"] = `# Quest 3: Project Investigation
-Investigate the developer's built projects in depth.
+  files["/quests/03-projects.md"] = `# Quest 3: Count Attendance Records
+Write a JavaScript function that counts each student's latest valid attendance record.
 
-## Clues
-1. Run \`ls /projects/\` to list all projects.
-2. Open at least 3 project files using \`cat\`.
-3. Find the project involving Machine Learning.
+## Your Task
+Run \`challenge 3\` and finish the \`summarizeAttendance(records)\` function.
 
-## Unlock Condition
-Discover 3 or more project files in /projects/.
+## Extra Things to Find
+Read \`/projects/attendance-go.md\` and \`/projects/mrs.md\`, then run \`projects\`.
 
 ## Hint
-Look for mrs.md — a movie recommendation system using KNN and TF-IDF.
+Keep one record per student. Count records that are invalid or replaced as ignored.
 `;
 
-  files["/quests/04-career.md"] = `# Quest 4: Career Journey
-Walk through the full professional timeline.
+  files["/quests/04-career.md"] = `# Quest 4: Check Which Pods Need Help
+Write a JavaScript function that finds pods whose ready count does not match the desired count.
 
-## Clues
-1. Run \`ls /experience/\` to list all career milestones.
-2. Read each file from the earliest to the most recent.
-3. Find the transition from intern to full engineer.
+## Your Task
+Run \`challenge 4\` and finish the \`reconcilePodEvents(events)\` function.
 
-## Unlock Condition
-Read all 4 career milestone files.
+## Extra Things to Find
+Read the files in \`/experience/\`, then run \`experience\`.
 
 ## Hint
-The journey goes: NIT Manipur → Devtron Intern → Devtron SDE → AppZoy.
+For each pod, keep the update with the largest revision number. Skip pods that already match.
 `;
 
-  files["/quests/05-hidden.md"] = `# Quest 5: Hidden Developer Insights
-Discover the easter eggs and personal insights.
+  files["/quests/05-hidden.md"] = `# Quest 5: Prepare Events to Send Again
+Write a JavaScript function that safely prepares events to send after an outage.
 
-## Clues
-1. Run \`ls /hidden/\` to find secret files.
-2. Read .fun_facts.md to learn personal tidbits.
-3. Try \`sudo hire komal\` in the terminal.
+## Your Task
+Run \`challenge 5\` and finish the \`planSafeReplay(request)\` function.
 
-## Unlock Condition
-Read the hidden fun facts file.
+## Extra Things to Find
+Read \`/hidden/.fun_facts.md\`, try \`sudo hire komal\`, and check the contact details.
 
 ## Hint
-The developer is an avid K-drama watcher who also likes cleaning for fun.
+Skip handled and repeated events. Keep their order, send only up to the limit, and count what remains.
 `;
 
   // /hidden/ - easter eggs

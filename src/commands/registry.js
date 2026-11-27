@@ -1,17 +1,7 @@
-﻿// Command Registry - all terminal commands
+// Command Registry - all terminal commands
 import { getNode, listDirectory, resolvePath } from "../virtualFS";
 import { portfolioData as pd } from "../data/portfolioData";
-
-const BANNER = `
-██████╗  ██████╗ ██████╗
-██╔══██╗██╔════╝██╔═══██╗
-██║  ██║██║     ██║   ██║
-██║  ██║██║     ██║▄▄ ██║
-██████╔╝╚██████╗╚██████╔╝
-╚═════╝  ╚═════╝ ╚══▀▀═╝  v1.0
-Developer Code Quest — by ${pd.character.name}
-Type "help" to see available commands.
-`.trim();
+import { challenges } from "../data/challenges";
 
 function pushLines(setState, lines) {
   setState((prev) => ({
@@ -47,13 +37,14 @@ export const commandRegistry = {
         { text: "  projects       List all projects / quests", type: "muted" },
         { text: "  experience     Show career timeline", type: "muted" },
         { text: "  contact        Show contact information", type: "muted" },
-        { text: "  quests         List discovery quests", type: "muted" },
-        { text: "  hint <quest>   Get a hint for a quest (1-5)", type: "muted" },
+        { text: "  quests         List discovery quests (Levels 1-5)", type: "muted" },
+        { text: "  challenge [id] Open a specific challenge", type: "muted" },
+        { text: "  hint <1-5>     Get a hint for a challenge", type: "muted" },
         { text: "  history        Show command history", type: "muted" },
         { text: "  clear          Clear terminal", type: "muted" },
         { text: "  reset --all    Reset all progress (with confirmation)", type: "muted" },
         { text: "", type: "" },
-        { text: "  Keyboard: ↑↓ history  Tab autocomplete  Ctrl+L clear", type: "muted" },
+        { text: "  Keyboard: ↑↓ history  Tab autocomplete  Ctrl+L clear  Ctrl+E explorer", type: "muted" },
       ];
       pushLines(setState, lines);
     },
@@ -236,48 +227,59 @@ export const commandRegistry = {
   },
 
   quests: {
-    description: "List discovery quests",
+    description: "List discovery quests and difficulty levels",
     execute({ state, setState }) {
-      const questFiles = [
-        { num: 1, name: "Identity",    id: "01-identity",  path: "/quests/01-identity.md" },
-        { num: 2, name: "Tech Stack",  id: "02-techstack", path: "/quests/02-techstack.md" },
-        { num: 3, name: "Projects",    id: "03-projects",  path: "/quests/03-projects.md" },
-        { num: 4, name: "Career",      id: "04-career",    path: "/quests/04-career.md" },
-        { num: 5, name: "Hidden",      id: "05-hidden",    path: "/quests/05-hidden.md" },
-      ];
       const lines = [
-        { text: "[ Discovery Quests ]", type: "banner" },
+        { text: "[ Discovery Quest Progression: Beginner to Advanced ]", type: "banner" },
         { text: "", type: "" },
-        ...questFiles.map((q) => {
-          const done = !!state.completedChallenges?.[q.id];
+        ...challenges.map((ch) => {
+          const done = !!state.completedChallenges?.[ch.id];
           return {
-            text: `  [${done ? "✓" : " "}] Quest ${q.num}: ${q.name} — cat ${q.path}`,
+            text: `  [${done ? "✓" : " "}] Level ${ch.level} (${ch.tier}): ${ch.title}\n      → cat ${ch.questFilePath} (+${ch.xpReward} XP)`,
             type: done ? "success" : "muted",
           };
         }),
         { text: "", type: "" },
-        { text: "Run 'cat /quests/<file>' to open a quest.", type: "muted" },
-        { text: "Run 'hint <1-5>' for a hint.", type: "muted" },
+        { text: "Type 'cat /quests/<file>' or 'challenge <id>' to begin.", type: "muted" },
+        { text: "Type 'hint <1-5>' for level-specific hints.", type: "muted" },
       ];
       pushLines(setState, lines);
     },
   },
 
+  challenge: {
+    description: "Open a challenge by number (1-5) or id",
+    execute({ state, setState }, args) {
+      const query = args.trim();
+      const num = parseInt(query, 10);
+      const target = challenges.find((c) => c.level === num || c.id === query || c.id.includes(query));
+      if (!target) {
+        push(setState, `challenge: please specify a level 1 to 5. E.g. 'challenge 1'`, "error");
+        return;
+      }
+      const node = getNode(target.questFilePath);
+      setState((prev) => ({
+        ...prev,
+        editorFile: target.questFilePath,
+        editorContent: node || "",
+        editorOpen: true,
+        terminalOutput: [
+          ...prev.terminalOutput,
+          { text: `Opening ${target.title} (${target.difficulty}) in editor...`, type: "success" },
+        ],
+      }));
+    },
+  },
+
   hint: {
-    description: "Get a quest hint",
+    description: "Get a quest hint (1-5)",
     execute({ setState }, args) {
-      const hints = [
-        "Quest 1 (Identity): Run `cat /about.md` and then explore `/hidden/`.",
-        "Quest 2 (Tech Stack): Run `cat /skills.md` and `ls /experience/`.",
-        "Quest 3 (Projects): Run `ls /projects/` and open at least 3 project files.",
-        "Quest 4 (Career): Run `ls /experience/` and read all 4 milestone files.",
-        "Quest 5 (Hidden): Run `ls /hidden/` — look for files starting with a dot.",
-      ];
       const num = parseInt(args.trim(), 10);
-      if (num >= 1 && num <= 5) {
-        push(setState, `Hint [Quest ${num}]: ${hints[num - 1]}`, "warn");
+      const target = challenges.find((c) => c.level === num);
+      if (target) {
+        push(setState, `Hint [Level ${target.level} - ${target.title}]: ${target.hint}`, "warn");
       } else {
-        push(setState, "hint: provide a quest number 1-5. E.g. 'hint 1'", "error");
+        push(setState, "hint: provide a level from 1 to 5. E.g. 'hint 1' or 'hint 5'", "error");
       }
     },
   },
@@ -334,12 +336,12 @@ export const commandRegistry = {
           { text: "Komal is actively exploring software engineering roles.", type: "" },
           { text: "Specializations: Distributed Systems, Full-Stack Web, Healthcare Tech", type: "muted" },
           { text: "", type: "" },
-          { text: "📬 Contact:", type: "" },
+          { text: "📬 Contact Channels:", type: "" },
           { text: `  Email:    ${pd.character.email}`, type: "" },
           { text: `  LinkedIn: ${pd.character.linkedin}`, type: "" },
           { text: `  GitHub:   ${pd.character.github}`, type: "" },
           { text: "", type: "" },
-          { text: "🏆 Achievement unlocked: VIP Candidate Pass (+250 XP)!", type: "success" },
+          { text: "🏆 Level 5 Insight Unlocked: VIP Candidate Pass (+250 XP)!", type: "success" },
         ];
         pushLines(setState, lines);
         if (unlockAchievement) {

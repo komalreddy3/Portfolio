@@ -1,6 +1,6 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { useAppContext } from "../../context/AppContext";
-import { listDirectory, getNode, resolvePath } from "../../virtualFS";
+import { listDirectory, getNode } from "../../virtualFS";
 
 function TreeNode({ path, name, level, selectedPath, onSelect, showHidden }) {
   const isDir = getNode(path) === "DIR";

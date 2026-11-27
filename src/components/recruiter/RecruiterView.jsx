@@ -1,6 +1,9 @@
-﻿import React from "react";
+import React from "react";
 import { portfolioData as pd } from "../../data/portfolioData";
 import { useAppContext } from "../../context/AppContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faArrowRight, faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecruiterView() {
   const { setMode } = useAppContext();
@@ -20,17 +23,30 @@ export default function RecruiterView() {
             <button
               className="hud-btn"
               onClick={() => setMode("game")}
-              style={{ marginTop: "8px" }}
+              style={{ marginTop: "8px", display: "inline-flex", alignItems: "center", gap: "8px" }}
             >
-              ⌨ Switch to Interactive Quest Mode
+              <FontAwesomeIcon icon={faTerminal} />
+              <span>Switch to Developer Workspace</span>
             </button>
           </div>
 
           <div className="rv-links">
-            <a href={`mailto:${character.email}`} className="rv-link">✉ {character.email}</a>
-            <a href={character.github} target="_blank" rel="noopener noreferrer" className="rv-link">🐙 GitHub</a>
-            <a href={character.linkedin} target="_blank" rel="noopener noreferrer" className="rv-link">💼 LinkedIn</a>
-            <a href={`https://discord.com/users/880422564332208168`} target="_blank" rel="noopener noreferrer" className="rv-link">💬 Discord: {character.discord}</a>
+            <a href={`mailto:${character.email}`} className="rv-link">
+              <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: "6px" }} />
+              <span>{character.email}</span>
+            </a>
+            <a href={character.github} target="_blank" rel="noopener noreferrer" className="rv-link">
+              <FontAwesomeIcon icon={faGithub} style={{ marginRight: "6px" }} />
+              <span>GitHub</span>
+            </a>
+            <a href={character.linkedin} target="_blank" rel="noopener noreferrer" className="rv-link">
+              <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: "6px" }} />
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://discord.com/users/880422564332208168" target="_blank" rel="noopener noreferrer" className="rv-link">
+              <FontAwesomeIcon icon={faDiscord} style={{ marginRight: "6px" }} />
+              <span>Discord: {character.discord}</span>
+            </a>
           </div>
         </div>
       </section>
@@ -41,9 +57,9 @@ export default function RecruiterView() {
           <h2 className="rv-section-title">Core Engineering Focus</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
             {character.coreFocus.map((focus, i) => (
-              <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "14px" }}>
+              <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "16px" }}>
                 <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text)", marginBottom: "4px" }}>{focus.title}</h3>
-                <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: 0 }}>{focus.desc}</p>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{focus.desc}</p>
               </div>
             ))}
           </div>
@@ -73,11 +89,11 @@ export default function RecruiterView() {
 
         {/* Technical Skills */}
         <section className="rv-section">
-          <h2 className="rv-section-title">Technical Skills & Abilities</h2>
+          <h2 className="rv-section-title">Technical Competencies & Systems</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
             {skillCategories.map((cat) => (
               <div key={cat.id} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "16px" }}>
-                <h3 style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--accent)", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                <h3 style={{ fontSize: "0.84rem", fontWeight: 700, color: "var(--accent)", marginBottom: "12px", textTransform: "uppercase", letterSpacing: "0.04em" }}>
                   {cat.title}
                 </h3>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -111,13 +127,15 @@ export default function RecruiterView() {
                 </div>
                 <div className="rv-project-links">
                   {p.codeLink && (
-                    <a href={p.codeLink} target="_blank" rel="noopener noreferrer" className="rv-project-link">
-                      Source Code →
+                    <a href={p.codeLink} target="_blank" rel="noopener noreferrer" className="rv-project-link" style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                      <span>Source Code</span>
+                      <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: "0.68rem" }} />
                     </a>
                   )}
                   {p.rolllink && (
-                    <a href={p.rolllink} target="_blank" rel="noopener noreferrer" className="rv-project-link">
-                      Live App →
+                    <a href={p.rolllink} target="_blank" rel="noopener noreferrer" className="rv-project-link" style={{ display: "inline-flex", alignItems: "center", gap: "4px", marginLeft: "12px" }}>
+                      <span>Live Deployment</span>
+                      <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: "0.68rem" }} />
                     </a>
                   )}
                 </div>

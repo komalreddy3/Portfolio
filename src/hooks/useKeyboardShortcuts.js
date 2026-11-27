@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 
 export function useKeyboardShortcuts() {
