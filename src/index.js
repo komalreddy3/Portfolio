@@ -1,19 +1,16 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-import { GameStateProvider } from './context/GameStateContext';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/global.css';
-import './styles/cyber-theme.css';
+﻿import React from "react";
+import { createRoot } from "react-dom/client";
+import { AppContextProvider } from "./context/AppContext";
+import App from "./App";
+import "./styles/index.css";
 
-const root = createRoot(document.getElementById('root'));
+const container = document.getElementById("root");
+const root = createRoot(container);
+
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <GameStateProvider>
-        <App />
-      </GameStateProvider>
-    </HashRouter>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
   </React.StrictMode>
 );

@@ -1,44 +1,26 @@
-import React, { useEffect } from 'react';
-import { useGameState } from '../../hooks/useGameState';
-import { Award, X } from 'lucide-react';
-import './AchievementToast.css';
+﻿import React, { useEffect } from "react";
+import { useAppContext } from "../../context/AppContext";
 
 export default function AchievementToast() {
-  const { recentAchievement, dismissAchievementToast } = useGameState();
+  const { state, clearAchievementToast } = useAppContext();
+  const { pendingAchievement } = state;
 
   useEffect(() => {
-    if (!recentAchievement) return;
-    const timer = setTimeout(() => {
-      dismissAchievementToast();
-    }, 4500);
+    if (!pendingAchievement) return;
+    const timer = setTimeout(clearAchievementToast, 4000);
     return () => clearTimeout(timer);
-  }, [recentAchievement, dismissAchievementToast]);
+  }, [pendingAchievement, clearAchievementToast]);
 
-  if (!recentAchievement) return null;
+  if (!pendingAchievement) return null;
+  const { title, desc, icon, xp } = pendingAchievement;
 
   return (
-    <aside className="achievement-toast-container" role="status" aria-live="polite">
-      <div className="achievement-toast-card">
-        <div className="toast-icon-badge">
-          <span className="toast-emoji">{recentAchievement.icon || '🏆'}</span>
-        </div>
-        <div className="toast-body">
-          <div className="toast-tag">
-            <Award size={12} />
-            <span>ACHIEVEMENT UNLOCKED</span>
-          </div>
-          <h4 className="toast-title">{recentAchievement.title}</h4>
-          <p className="toast-desc">{recentAchievement.desc}</p>
-        </div>
-        <div className="toast-xp-pill">+{recentAchievement.xp} XP</div>
-        <button
-          className="toast-close-btn"
-          onClick={dismissAchievementToast}
-          aria-label="Close notification"
-        >
-          <X size={14} />
-        </button>
+    <div className="achievement-toast" role="alert" aria-live="polite">
+      <span className="achievement-icon">{icon}</span>
+      <div className="achievement-text">
+        <div className="at-title">🏆 {title}</div>
+        <div className="at-desc">{desc} {xp > 0 && `(+${xp} XP)`}</div>
       </div>
-    </aside>
+    </div>
   );
 }

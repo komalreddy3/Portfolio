@@ -21,13 +21,14 @@
     "prismjs": "^1.30.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.4",
+    "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "react-tooltip": "^6.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:clean": "npx kill-port 3000 3001 3002 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -36,8 +37,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -53,6 +53,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@typescript-eslint/eslint-plugin": "^8.74.0",
+    "@typescript-eslint/parser": "^8.74.0",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,279 +1,131 @@
-import React from 'react';
-import { portfolioData } from '../../data/portfolioData';
-import { useGameState } from '../../hooks/useGameState';
-import {
-  Briefcase,
-  FolderKanban,
-  GraduationCap,
-  Wrench,
-  Mail,
-  Github,
-  Linkedin,
-  ExternalLink,
-  MapPin,
-  Gamepad2,
-  Calendar
-} from 'lucide-react';
-import './RecruiterView.css';
+﻿import React from "react";
+import { portfolioData as pd } from "../../data/portfolioData";
+import { useAppContext } from "../../context/AppContext";
 
 export default function RecruiterView() {
-  const { character, careerPath, quests, skillCategories } = portfolioData;
-  const { setMode, inspectQuest, sound } = useGameState();
-
-  const jobs = careerPath.filter((c) => c.id !== 'nit-manipur');
-  const education = careerPath.find((c) => c.id === 'nit-manipur');
+  const { setMode } = useAppContext();
+  const { character, careerPath, quests, skillCategories } = pd;
 
   return (
-    <div className="recruiter-view-root">
-      {/* Subnav Anchor Header */}
-      <nav className="recruiter-subnav">
-        <div className="recruiter-subnav-inner">
-          <span className="recruiter-pill-label">
-            <Briefcase size={14} /> RECRUITER EXECUTIVE VIEW
-          </span>
-          <div className="recruiter-anchors">
-            <a href="#summary">Summary</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+    <div className="recruiter-view" role="region" aria-label="Recruiter View">
+      {/* Hero section */}
+      <section className="rv-hero">
+        <div className="rv-container">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "16px" }}>
+            <div>
+              <h1 className="rv-name">{character.name}</h1>
+              <div className="rv-role">{character.role} · {character.location}</div>
+              <p className="rv-bio">{character.tagline}</p>
+            </div>
+            <button
+              className="hud-btn"
+              onClick={() => setMode("game")}
+              style={{ marginTop: "8px" }}
+            >
+              ⌨ Switch to Interactive Quest Mode
+            </button>
           </div>
-          <button
-            className="btn-switch-rpg"
-            onClick={() => setMode('game')}
-            title="Switch back to interactive game mode"
-          >
-            <Gamepad2 size={14} />
-            <span>Switch to RPG Mode</span>
-          </button>
+
+          <div className="rv-links">
+            <a href={`mailto:${character.email}`} className="rv-link">✉ {character.email}</a>
+            <a href={character.github} target="_blank" rel="noopener noreferrer" className="rv-link">🐙 GitHub</a>
+            <a href={character.linkedin} target="_blank" rel="noopener noreferrer" className="rv-link">💼 LinkedIn</a>
+            <a href={`https://discord.com/users/880422564332208168`} target="_blank" rel="noopener noreferrer" className="rv-link">💬 Discord: {character.discord}</a>
+          </div>
         </div>
-      </nav>
+      </section>
 
-      <main className="recruiter-document-body">
-        {/* Header / Summary Section */}
-        <section id="summary" className="recruiter-section recruiter-summary-card">
-          <div className="recruiter-header-top">
-            <div className="recruiter-name-block">
-              <h1 className="recruiter-name">{character.name}</h1>
-              <h2 className="recruiter-role-subtitle">{character.role}</h2>
-              <div className="recruiter-meta-row">
-                <span><MapPin size={14} /> {character.location}</span>
-                <span>•</span>
-                <a href={`mailto:${character.email}`}>{character.email}</a>
-                <span>•</span>
-                <a href={character.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                <span>•</span>
-                <a href={character.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </div>
-            </div>
-
-            <div className="recruiter-resume-cta">
-              <a
-                href={`mailto:${character.email}?subject=Interview%20Inquiry%20-%20Komal%20Reddy`}
-                className="btn-recruiter-primary"
-                onClick={() => sound.playClick()}
-              >
-                <Mail size={15} />
-                <span>Contact for Opportunities</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="recruiter-bio-box">
-            <p>
-              Full-Stack Engineer with hands-on production experience in <strong>event-driven microservices</strong>, 
-              <strong>cloud container orchestration (Docker/Kubernetes)</strong>, and <strong>healthcare technology pipelines (DICOM/HL7)</strong>. 
-              Graduated from NIT Manipur with a 9+ CGPA. Proven ability to write reliable backend services in Go and Python, 
-              and build modern, reactive web frontends in React.js paired with Node.js APIs.
-            </p>
-          </div>
-
-          {/* Quick Snapshot Focus Areas */}
-          <div className="recruiter-snapshot-grid">
-            {character.coreFocus.map((f, i) => (
-              <div key={i} className="snapshot-item">
-                <span className="snapshot-title">{f.title}</span>
-                <span className="snapshot-desc">{f.desc}</span>
+      <div className="rv-container" style={{ paddingTop: "32px", paddingBottom: "64px" }}>
+        {/* Core Focus */}
+        <section className="rv-section">
+          <h2 className="rv-section-title">Core Engineering Focus</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
+            {character.coreFocus.map((focus, i) => (
+              <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "14px" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text)", marginBottom: "4px" }}>{focus.title}</h3>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: 0 }}>{focus.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Work Experience Section */}
-        <section id="experience" className="recruiter-section">
-          <div className="recruiter-section-header">
-            <Briefcase size={20} className="section-header-icon" />
-            <h3 className="section-title">Professional Experience</h3>
-          </div>
-
-          <div className="recruiter-timeline">
-            {jobs.map((job) => (
-              <article key={job.id} className="recruiter-job-card">
-                <div className="job-card-header">
-                  <div>
-                    <h4 className="job-title">{job.role}</h4>
-                    <span className="job-company">{job.company}</span>
-                    <span className="job-location"> — {job.location}</span>
-                  </div>
-                  <span className="job-period">
-                    <Calendar size={13} /> {job.period}
-                  </span>
+        {/* Experience */}
+        <section className="rv-section">
+          <h2 className="rv-section-title">Professional Experience</h2>
+          <div>
+            {careerPath.slice().reverse().map((exp) => (
+              <div key={exp.id} className="rv-career-item">
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
+                  <h3 className="rv-career-role">{exp.role}</h3>
+                  <span className="rv-career-period">{exp.period}</span>
                 </div>
+                <div className="rv-career-company">{exp.company} {exp.location ? `· ${exp.location}` : ""}</div>
+                <p className="rv-career-summary" style={{ marginTop: "6px" }}>{exp.summary}</p>
+                <div className="rv-tags">
+                  {exp.techStack.map((tech) => (
+                    <span key={tech} className="rv-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-                <p className="job-summary">{job.summary}</p>
-
-                <ul className="job-bullet-list">
-                  {job.commitLog.map((bullet, idx) => (
-                    <li key={idx}>{bullet}</li>
+        {/* Technical Skills */}
+        <section className="rv-section">
+          <h2 className="rv-section-title">Technical Skills & Abilities</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
+            {skillCategories.map((cat) => (
+              <div key={cat.id} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "16px" }}>
+                <h3 style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--accent)", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                  {cat.title}
+                </h3>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {cat.skills.map((s) => (
+                    <li key={s.name} style={{ marginBottom: "8px", fontSize: "0.82rem" }}>
+                      <strong style={{ color: "var(--text)" }}>{s.name}</strong>
+                      <div style={{ color: "var(--text-muted)", fontSize: "0.78rem" }}>{s.role}</div>
+                    </li>
                   ))}
                 </ul>
-
-                <div className="job-tech-pills">
-                  {job.techStack.map((tech, idx) => (
-                    <span key={idx} className="r-tech-tag">{tech}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section id="projects" className="recruiter-section">
-          <div className="recruiter-section-header">
-            <FolderKanban size={20} className="section-header-icon" />
-            <h3 className="section-title">Key Projects &amp; Software Systems</h3>
-          </div>
-
-          <div className="recruiter-projects-table-wrap">
-            <div className="recruiter-projects-grid">
-              {quests.map((project) => (
-                <div key={project.id} className="recruiter-project-card">
-                  <div className="r-proj-top">
-                    <h4 className="r-proj-title">{project.title}</h4>
-                    <span className="r-proj-tier">{project.tier}</span>
-                  </div>
-
-                  <p className="r-proj-desc">{project.desc}</p>
-
-                  <div className="r-proj-tech">
-                    <strong>Stack:</strong> {project.tech}
-                  </div>
-
-                  <div className="r-proj-actions">
-                    <button
-                      className="r-inspect-btn"
-                      onClick={() => inspectQuest(project)}
-                    >
-                      View Details
-                    </button>
-                    {project.rolllink && (
-                      <a
-                        href={project.rolllink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="r-action-link"
-                      >
-                        <ExternalLink size={13} /> Demo
-                      </a>
-                    )}
-                    {project.codeLink && (
-                      <a
-                        href={project.codeLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="r-action-link"
-                      >
-                        <Github size={13} /> GitHub
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section (NO FAKE PERCENTAGES!) */}
-        <section id="skills" className="recruiter-section">
-          <div className="recruiter-section-header">
-            <Wrench size={20} className="section-header-icon" />
-            <h3 className="section-title">Technical Skills &amp; Domain Expertise</h3>
-          </div>
-
-          <div className="recruiter-skills-matrix">
-            {skillCategories.map((category) => (
-              <div key={category.id} className="skills-category-row">
-                <span className="category-row-name">{category.title}:</span>
-                <div className="category-skills-tags">
-                  {category.skills.map((s) => (
-                    <span key={s.name} className="skill-matrix-tag" title={s.role}>
-                      {s.name}
-                    </span>
-                  ))}
-                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Education Section */}
-        {education && (
-          <section id="education" className="recruiter-section">
-            <div className="recruiter-section-header">
-              <GraduationCap size={20} className="section-header-icon" />
-              <h3 className="section-title">Education</h3>
-            </div>
-
-            <div className="recruiter-education-card">
-              <div className="edu-top-row">
-                <div>
-                  <h4 className="edu-degree">{education.role}</h4>
-                  <span className="edu-school">{education.company}</span>
+        {/* Featured Projects */}
+        <section className="rv-section">
+          <h2 className="rv-section-title">Featured Projects & Architecture</h2>
+          <div className="rv-projects-grid">
+            {quests.map((p) => (
+              <div key={p.id} className="rv-project-card">
+                <h3 className="rv-project-title">{p.title}</h3>
+                <div style={{ fontSize: "0.72rem", color: "var(--accent)", fontFamily: "var(--font-mono)", marginBottom: "6px" }}>
+                  {p.tier} · {p.difficulty}
                 </div>
-                <span className="edu-period">{education.period}</span>
+                <p className="rv-project-desc">{p.desc}</p>
+                <div className="rv-tags" style={{ marginBottom: "12px" }}>
+                  {p.techList.map((t) => (
+                    <span key={t} className="rv-tag">{t}</span>
+                  ))}
+                </div>
+                <div className="rv-project-links">
+                  {p.codeLink && (
+                    <a href={p.codeLink} target="_blank" rel="noopener noreferrer" className="rv-project-link">
+                      Source Code →
+                    </a>
+                  )}
+                  {p.rolllink && (
+                    <a href={p.rolllink} target="_blank" rel="noopener noreferrer" className="rv-project-link">
+                      Live App →
+                    </a>
+                  )}
+                </div>
               </div>
-              <p className="edu-desc">{education.summary}</p>
-              <div className="edu-coursework">
-                <strong>Key Coursework:</strong> {education.techStack.join(', ')}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Contact Footer */}
-        <section id="contact" className="recruiter-section recruiter-contact-section">
-          <h3 className="section-title">Let's Connect</h3>
-          <p className="contact-lead-text">
-            Available for software engineering roles, distributed systems work, and full-stack development.
-          </p>
-          <div className="recruiter-contact-actions">
-            <a href={`mailto:${character.email}`} className="btn-recruiter-primary">
-              <Mail size={15} />
-              <span>{character.email}</span>
-            </a>
-            <a
-              href={character.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-recruiter-secondary"
-            >
-              <Linkedin size={15} />
-              <span>LinkedIn Profile</span>
-            </a>
-            <a
-              href={character.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-recruiter-secondary"
-            >
-              <Github size={15} />
-              <span>GitHub Repositories</span>
-            </a>
+            ))}
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 }
